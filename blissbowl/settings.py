@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['blissbowl.heroku.com', '127.0.0.1']
+ALLOWED_HOSTS = ['blissbowl-375a7f20caf7.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
