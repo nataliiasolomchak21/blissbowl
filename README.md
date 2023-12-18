@@ -1,39 +1,140 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BlissBowl Website
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+View the live project [here](https://moviegeek-booking-1c00719de368.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![Am I Responsive](documentation/readme_files/am-i-responsive.png)
 
-## Codeanywhere Reminders
+## Table of Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- [UX](#ux)
+    - [Target Audience](#target-audience)
+    - [Key Project Goals](#key-project-goals)
+    - [User Stories](#user-stories)
+    - [Agile Methodology](#agile-methodology)
+- [UI](#ui)
+    - [Initial Design](#initial-design)
+    - [Colour Palette](#colour-palette)
+    - [Typography](#typography)
+- [ERD (Entity-Relationship Diagram)](#erd-entity-relationship-diagram)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features Left to Implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+- [Ecommerce Business Model](#ecommerce-business-model)
+- [Search Engine Optimization (SEO) & Social Media Marketing](#search-engine-optimization-seo--social-media-marketing)
+    - [Keywords](#keywords)
+    - [Sitemap](#sitemap)
+    - [Robots](#robots)
+    - [Social Media Marketing](#social-media-marketing)
+    - [Newsletter Marketing](#newsletter-marketing)
+- [Deployment](#deployment)
+    - [Database (ElephangSQL)](#database-elephangsql)
+    - [Django secret key](#django-secret-key)
+    - [AWS](#aws)
+    - [Stripe API](#stripe-api)
+    - [Gmail API](#gmail-api)
+    - [Heroku](#heroku)
+    - [Final Deployment](#final-deployment)
+    - [How to Fork the Github Repository](#how-to-fork-the-github-repository)
+    - [How to Clone the Github Repository](#how-to-clone-the-github-repository)
+- [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+    - [Code](#code)
+- [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
+## UX
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Target Audience
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### Key Project Goals
 
-`http_server`
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Site-visitor
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+#### Shopper
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Site-admin
 
-To log into the Heroku toolbelt CLI:
+### Agile Methodology
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Kanban Board
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### Iterations
 
----
+#### Issues
 
-Happy coding!
+#### Labels, Issues and MoSCoW prioritization
+
+#### Story Points
+
+#### Won't Have For This Deployment
+
+## UI
+
+### Initial Design
+
+### Colour Palette
+
+### Typography
+
+## ERD (Entity-Relationship Diagram)
+
+## Features
+
+### Existing Features
+
+### Features Left to Implement
+
+## Technologies Used
+
+## Ecommerce Business Model
+
+## Search Engine Optimization (SEO) & Social Media Marketing
+
+### Keywords
+
+### Sitemap
+
+### Robots
+
+### Social Media Marketing
+
+### Newsletter Marketing
+
+## Testing
+
+All the information on testing is in [TESTING.md](TESTING.md)
+
+## Deployment
+
+### Database (ElephangSQL)
+
+### Django secret key
+
+### AWS
+
+### Stripe API
+
+### Gmail API 
+
+### Heroku
+
+### Final Deployment
+
+### How to Fork the Github Repository
+
+### How to Clone the Github Repository
+
+## Credits
+
+### Content
+
+### Media
+
+### Code
+
+## Acknowledgements
+
