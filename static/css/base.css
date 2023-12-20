@@ -7,11 +7,115 @@
     border: 0;
     scroll-behavior: smooth;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    overflow: hidden;
+}
+
+/* General styling */ 
+body {
+    background-color: #fff;
+    overflow-y: auto;
+    background: #E0E8E0;
+}
+
+/* Main content */
+main {
+    /* Makes main element large enough to push the footer down */
+    flex: 1 0 auto;
+    /* Enables child element to have flex properties */
+    display: flex;
+    flex-direction: column; /* Adjust the padding as needed based on the height of the messages container */
+}
+
+a {
+    text-decoration: none;
+}
+
+.home {
+    background: url('/static/media/hero-image.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 100%;
+    height: 70vh;
+}
+
+.home h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .logo-font-text {
     font-family: 'Playball', cursive;
 }
+
+.category-card {
+    width: 17rem;
+    height: 4rem;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.category-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .7rem;
+    gap: .5rem;
+    border: 2px solid;
+    border-radius: 0.9375rem;
+    font-size: 1rem;
+}
+
+.chicken-category {
+    border-color:#EB6424;
+    background: #F1C4B6;
+}
+
+.chicken-category a,
+.chicken-category span {
+    color: #EB6424;
+    font-weight: 600;
+}
+
+.fish-category {
+    border: 2px solid #4078A1;
+    background: #BFEDF7;
+}
+
+.fish-category a {
+    color: #4078A1;
+    font-weight: 600;
+}
+
+.beef-category {
+    border: 2px solid #C0522F;
+    background: #F3B293;
+}
+
+.beef-category a {
+    color: #C0522F;
+    font-weight: 600;
+}
+
+.veggie-category {
+    border: 2px solid #23301E;
+    background: #B1D6A2;
+}
+
+.veggie-category a {
+    color: #23301E;
+    font-weight: 600;
+}
+
+.product-box {
+    max-width: 540px;
+    border-radius: 1.25rem;
+    border: 1px solid var(--Text-colour, #191515);
+}
+
+
 
 
