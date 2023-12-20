@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-<h1 class="display-4 text-success">It works</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 home">
+            <h1 class="display-4">Discover culinary delights in every bowl!</h1>
+            <p>Join BlissBowl on a culinary journey – explore our menu and find your favorite bowl today!</p>
+            <div class="">
+                <h4><a href="" class="text-white bg-black rounded-5">Explore Bowls Now</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
