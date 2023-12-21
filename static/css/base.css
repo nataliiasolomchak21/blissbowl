@@ -13,7 +13,6 @@
 body {
     background-color: #fff;
     overflow-y: auto;
-    background: #E0E8E0;
 }
 
 /* Main content */
@@ -25,11 +24,25 @@ main {
     flex-direction: column; /* Adjust the padding as needed based on the height of the messages container */
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
 
+.delivery-banner {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
 .home {
+    position: relative;
+    top: 50px;
     background: url('/static/media/hero-image.jpg') no-repeat center;
     background-size: cover;
     display: flex;
@@ -38,7 +51,17 @@ a {
     align-items: flex-start;
     padding: 2rem;
     width: 100%;
-    height: 70vh;
+    height: 50vh;
+}
+
+.home .home-text {
+    margin-top: 3rem;
+    padding: .5rem;
+    min-width: 18rem;
+}
+
+.home-text h1 {
+    font-size: 3rem;
 }
 
 .home h1 {
@@ -48,6 +71,13 @@ a {
 
 .logo-font-text {
     font-family: 'Playball', cursive;
+}
+
+.categories,
+.products,
+.testimonials {
+    position: relative;
+    top: 50px;
 }
 
 .category-card {
@@ -70,12 +100,14 @@ a {
 }
 
 .chicken-category {
-    border-color:#EB6424;
+    border: 2px solid #EB6424;
     background: #F1C4B6;
+    color: #EB6424;
+    font-weight: 600;
+    border-radius: 0.9375rem;
 }
 
-.chicken-category a,
-.chicken-category span {
+.chicken-category a {
     color: #EB6424;
     font-weight: 600;
 }
@@ -83,6 +115,7 @@ a {
 .fish-category {
     border: 2px solid #4078A1;
     background: #BFEDF7;
+    border-radius: 0.9375rem;
 }
 
 .fish-category a {
@@ -93,6 +126,9 @@ a {
 .beef-category {
     border: 2px solid #C0522F;
     background: #F3B293;
+    color: #C0522F;
+    font-weight: 600;
+    border-radius: 0.9375rem;
 }
 
 .beef-category a {
@@ -103,6 +139,8 @@ a {
 .veggie-category {
     border: 2px solid #23301E;
     background: #B1D6A2;
+    color: #23301E;
+    font-weight: 600;
 }
 
 .veggie-category a {
@@ -111,10 +149,32 @@ a {
 }
 
 .product-box {
-    max-width: 540px;
-    border-radius: 1.25rem;
-    border: 1px solid var(--Text-colour, #191515);
+    border: 2px solid #191515;
+    border-radius: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    background: #E0E8E0;
 }
+
+.product-box img {
+    border-radius: 1.5rem;
+}
+
+.details-btn {
+    width: 10rem;
+    height: 2.5rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    font-size: 1rem;
+    background-color: #191515;
+    padding: .4rem;
+    text-align: center;
+}
+
+
+
+
+
 
 
 
