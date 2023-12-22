@@ -35,9 +35,8 @@ a {
     text-decoration: none;
 }
 
-.delivery-banner {
-    font-size: 1.2rem;
-    color: #fff;
+.search-box {
+    border-color: transparent;
 }
 
 .home {
@@ -55,16 +54,12 @@ a {
 }
 
 .home .home-text {
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding: .5rem;
-    min-width: 18rem;
+    min-width: 10rem;
 }
 
 .home-text h1 {
-    font-size: 3rem;
-}
-
-.home h1 {
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -81,7 +76,7 @@ a {
 }
 
 .category-card {
-    width: 17rem;
+    width: 100%;
     height: 4rem;
     border-color: transparent;
     background-color: transparent;
@@ -116,6 +111,8 @@ a {
     border: 2px solid #4078A1;
     background: #BFEDF7;
     border-radius: 0.9375rem;
+    color: #4078A1;
+    font-weight: 600;
 }
 
 .fish-category a {
@@ -141,6 +138,7 @@ a {
     background: #B1D6A2;
     color: #23301E;
     font-weight: 600;
+    border-radius: 0.9375rem;
 }
 
 .veggie-category a {
@@ -161,7 +159,7 @@ a {
 }
 
 .details-btn {
-    width: 10rem;
+    width: 12rem;
     height: 2.5rem;
     font-weight: 500;
     border-radius: .5rem;
@@ -169,6 +167,24 @@ a {
     background-color: #191515;
     padding: .4rem;
     text-align: center;
+}
+
+@media (min-width: 992px) {
+    .navbar-box {
+        justify-content: flex-end !important;
+    }
+
+    .category-body {
+        width: 17rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .details-btn {
+        width: 10rem;
+    }
+
+
 }
 
 

@@ -6,19 +6,17 @@
 <head>
   <!-- Meta tags -->
   {% block meta %}
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   {% endblock %}
 
   {% block extra_meta %}
   {% endblock %}
   <!-- Bootstrap CSS -->
   {% block corecss %}
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Playball&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playball&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
@@ -30,12 +28,8 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <!-- Font Awesome kit -->
   <script src="https://kit.fontawesome.com/c5425afe05.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
   {% endblock %}
 
   {% block extra_js %}
@@ -50,70 +44,71 @@
 
 <body>
   <!-- Header -->
-  <header class="mb-4 border-bottom">
+  <header class="mb-4">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <div class="navbar-box d-flex">
-          <a class="navbar-brand logo-font-text" href="#">BlissBowl</a>
-          <div class="container d-flex flex-wrap ml-auto">
-            <ul class="nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Account
-                </a>
-                <ul class="dropdown-menu">
-                  {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                  <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                  {% endif %}
-                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                  {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                  {% endif %}
-                </ul>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">€0.00</a></li>
-            </ul>
+          <div class="navbar-box d-flex">
+              <a class="navbar-brand logo-font-text" href="#">BlissBowl</a>
+              <div class="container d-flex flex-wrap ml-auto">
+                  <ul class="nav">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              Account
+                          </a>
+                          <ul class="dropdown-menu">
+                              {% if request.user.is_authenticated %}
+                              {% if request.user.is_superuser %}
+                              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                              {% endif %}
+                              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                              {% else %}
+                              <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+                              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                              {% endif %}
+                          </ul>
+                      </li>
+                      <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">€0.00</a></li>
+                  </ul>
+              </div>
           </div>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-flex-end">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Categories
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Chicken Bowls</a></li>
-                <li><a class="dropdown-item" href="#">Fish Bowls</a></li>
-                <li><a class="dropdown-item" href="#">Beef Bowls</a></li>
-                <li><a class="dropdown-item" href="#">Veggie Bowls</a></li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-box" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Products</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Chicken Bowls</a></li>
+                          <li><a class="dropdown-item" href="#">Fish Bowls</a></li>
+                          <li><a class="dropdown-item" href="#">Beef Bowls</a></li>
+                          <li><a class="dropdown-item" href="#">Veggie Bowls</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="">Favourites</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="">Contact Us</a>
+                  </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Favourites</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+          </div>
       </div>
-    </nav>
-    <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2">
+  </nav>
+  
+    <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2 bg-black">
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex" role="search">
         <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary bg-black" type="submit">Search</button>
