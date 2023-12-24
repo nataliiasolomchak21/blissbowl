@@ -35,10 +35,12 @@ a {
     text-decoration: none;
 }
 
-.search-box {
-    border-color: transparent;
+/* Styles logo */
+.logo-font-text {
+    font-family: 'Playball', cursive;
 }
 
+/* Styles hero section */
 .home {
     position: relative;
     top: 50px;
@@ -46,35 +48,36 @@ a {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 2rem;
+    padding: 1.8rem;
     width: 100%;
     height: 50vh;
 }
 
 .home .home-text {
-    margin-top: 4rem;
-    padding: .5rem;
-    min-width: 10rem;
+    margin-top: 5rem;
 }
 
 .home-text h1 {
     font-size: 1.5rem;
-    font-weight: 600;
+    margin-bottom: .7rem;
+    font-weight: 700;
 }
 
-.logo-font-text {
-    font-family: 'Playball', cursive;
+.home-text p {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
+/* Styles sections */
 .categories,
 .products,
-.testimonials {
+.testimonials,
+.newsletter {
     position: relative;
     top: 50px;
 }
 
+/* Styles cards in category section */
 .category-card {
     width: 100%;
     height: 4rem;
@@ -159,7 +162,7 @@ a {
 }
 
 .details-btn {
-    width: 12rem;
+    width: 10rem;
     height: 2.5rem;
     font-weight: 500;
     border-radius: .5rem;
@@ -169,22 +172,69 @@ a {
     text-align: center;
 }
 
+/* Styles newsletter section */
+.newsletter-box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Styles footer */
+.footer {
+    position: relative;
+    top: 150px;
+    background-color: #57724C;
+    bottom: 0;
+}
+
+.logo-footer {
+    font-size: 1.5rem;
+}
+
+#social-media,
+#main-links {
+    list-style-type: none;
+    padding: 2rem;
+}
+
+#social-media a,
+#main-links a {
+    color: #fff;
+}
+
+#main-links li,
+#social-media li {
+    margin-top: .9rem;
+}
+
+.social-media-links i {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-text p {
+        font-size: 1.3rem;
+        max-width: 30rem;
+    }
+}
+
 @media (min-width: 992px) {
     .navbar-box {
         justify-content: flex-end !important;
     }
 
-    .category-body {
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .category-card {
         width: 17rem;
-        flex-direction: row;
-        flex-wrap: wrap;
     }
-
-    .details-btn {
-        width: 10rem;
-    }
-
-
 }
 
 

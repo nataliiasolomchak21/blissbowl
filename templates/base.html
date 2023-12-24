@@ -52,10 +52,9 @@
               <div class="container d-flex flex-wrap ml-auto">
                   <ul class="nav">
                       <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown"
                               aria-expanded="false">
-                              Account
-                          </a>
+                              <iconify-icon icon="ph:user" width="24" height="24" class="text-black mx-auto"></iconify-icon>                          </a>
                           <ul class="dropdown-menu">
                               {% if request.user.is_authenticated %}
                               {% if request.user.is_superuser %}
@@ -107,9 +106,9 @@
           </div>
       </div>
   </nav>
-  
+  <!-- Search box -->
     <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2 bg-black">
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex" role="search">
+      <form class="col-12 col-lg-6 mb-lg-0 d-flex" role="search">
         <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary bg-black" type="submit">Search</button>
       </form>
@@ -130,7 +129,28 @@
   <!-- Postload Js -->
   {% block postloadjs %}
   {% endblock %}
-  <footer></footer>
+  <footer class="footer d-flex justify-content-center align-items-center">
+    <!-- The code for social media icons is taken from Code Institute's Love Running Project -->
+    <ul id="social-media">
+      <a class="logo-font-text text-white logo-footer" href="#">BlissBowl</a>
+      <div class="social-media-links d-flex gap-3">
+      <li><a href="https://facebook.com" target="_blank" rel="noopener"
+              aria-label="Visit our Facebook page(open in a new tab)"><i class="fa-brands fa-facebook text-white"></i></a>
+      </li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener"
+              aria-label="Visit our Instagram page(open in a new tab)"><i class="fa-brands fa-instagram text-white"></i></a>
+      </li>
+    </div>
+      <p class="text-white mt-1">@Copyright BlissBowl 2024</p>
+  </ul>
+    <ul id="main-links">
+      <li><a href="">Home</a>
+      <li><a href="">Products</a>
+      <li><a href="">Contact Us</a>
+      <li><a href="">Privacy Policy</a>
+      <li><a href="">Back to Top</a>
+  </ul>
+  </footer>
 </body>
 
 </html>

@@ -8,67 +8,61 @@
     </div>
 </div>
 {% endblock %}
-
 {% block content %}
 <!-- Hero section -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-6 home">
-          <div class="home-text">
-            <h1>Discover culinary delights in every bowl!</h1>
-            <p>Join BlissBowl on a culinary journey – explore our menu and find your favorite bowl today!</p>
-            <div>
-                <h4><a href="#" class="btn btn-primary border-black bg-black rounded-5 text-white">Explore Our Bowls</a></h4>
-            </div>
+  <div class="row">
+      <div class="col-12 col-md-6 home">
+        <div class="home-text">
+          <h1>Discover culinary delights in every bowl!</h1>
+          <p>Join BlissBowl on a culinary journey – explore our menu and find your favorite bowl today!</p>
+          <div>
+              <h4><a href="#" class="btn btn-primary border-black bg-black rounded-5 text-white mt-2">Explore Our Bowls</a></h4>
           </div>
         </div>
-    </div>
+      </div>
+  </div>
 </div>
 <!-- Categories section -->
 <section class="categories">
-    <div class="container">
+    <div class="container justify-content-center align-items-center mt-4">
         <h2 class="p-4">Categories</h2>
-        <div class="row mx-auto">
-          <div class="col-lg-3 col-md-6 pb-2">
-              <div class="card category-card">
+        <div class="row d-flex justify-content-center align-items-center">
+              <div class="card category-card mb-1">
                   <div class="card-body category-body chicken-category">
                     <span><iconify-icon icon="fluent:food-chicken-leg-24-regular" style="color: #eb6424;" width="30" height="30"></iconify-icon></span>
                     <a href="#" class="card-link">Chicken Bowls</a>
                   </div>
               </div>
-          </div>
-          <div class="col-lg-3 col-md-6 pb-2">
-              <div class="card category-card">
+              <div class="card category-card mb-1">
                   <div class="card-body category-body fish-category">
                     <span><iconify-icon icon="mingcute:fish-line" style="color: #4078a1;" width="30" height="30"></iconify-icon></span>
                     <a href="#" class="card-link">Fish Bowls</a>
                   </div>
               </div>
-          </div>
-          <div class="col-lg-3 col-md-6 pb-2">
-              <div class="card category-card">
+              <div class="card category-card mb-1">
                   <div class="card-body category-body beef-category">
                     <span><iconify-icon icon="mdi:beef" style="color: #c0522f;" width="30" height="30"></iconify-icon></span>
                     <a href="#" class="card-link">Beef Bowls</a>
                   </div>
               </div>
-          </div>
-          <div class="col-lg-3 col-md-6 pb-2">
-              <div class="card category-card">
+              <div class="card category-card mb-1">
                   <div class="card-body category-body veggie-category">
                     <span><iconify-icon icon="ph:carrot" style="color: #23301e;" width="30" height="30"></iconify-icon></span>
                     <a href="#" class="card-link">Veggie Bowls</a>
                   </div>
               </div>
-          </div>
       </div>
-      
-    </div>
+          </div>
+        </div>
 </section>
 <!-- Products section -->
 <section class="products">
-    <div class="container justify-content-center align-items-center mx-auto">
-        <h2 class="p-4">Our Bowls</h2>
+    <div class="container justify-content-center align-items-center mx-auto mt-4">
+      <div class="heading-box d-flex justify-content-between p-4 gap-3">
+        <h2>Our Bowls</h2>
+        <a href="" class="bg-black rounded-5 text-white details-btn" style="width: 6rem;">See All</a>
+        </div>
         <div class="container d-flex justify-content-center align-items-center">
           <div class="row">
               <!-- Carousel for small screens -->
@@ -137,13 +131,13 @@
                       <span class="visually-hidden">Previous</span>
                   </button>
                   <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="carousel-control-next-icon bg-black p-1" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                   </button>
               </div>
               <!-- Cards for larger screens -->
               <div class="col-12 d-none d-md-flex flex-wrap justify-content-center gap-4">
-                <div class="card product-box rounded-5" style="max-width: 340px; max-height: 480px;">
+                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
                   <img src="/static/media/buffalo-chicken-quinoa-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
                   <div class="card-body p-2">
                     <h5 class="card-title p-2">Buffalo Chicken Quinoa Bowl</h5>
@@ -154,7 +148,7 @@
                   </div>
                   </div>
                 </div>
-                <div class="card product-box rounded-5" style="max-width: 340px; max-height: 480px;">
+                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
                   <img src="/static/media/Coconut Shrimp and Pineapple Bowl Fish.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
                   <div class="card-body p-2">
                     <h5 class="card-title p-2">Coconut Shrimp Pineapple Bowl</h5>
@@ -165,7 +159,7 @@
                   </div>
                   </div>
                 </div>
-                <div class="card product-box rounded-5" style="max-width: 340px; max-height: 480px;">
+                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
                   <img src="/static/media/beef-broccoli-brown-rice-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
                   <div class="card-body p-2">
                     <h5 class="card-title p-2">Beef Broccoli Brown Rice Bowl</h5>
@@ -179,7 +173,7 @@
                 <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
                   <img src="/static/media/chickpea-and-sweet-potato-buddha-bowl .png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
                   <div class="card-body p-2">
-                    <h5 class="card-title p-2">Chicke Pea Sweet Potato Bowl</h5>
+                    <h5 class="card-title p-2">Chicken Pea Sweet Potato Bowl</h5>
                     <a href="#" class="veggie-category p-1 mt-1 mx-2" style="font-size: .8rem;">Veggie Bowls</a>
                     <div class="price-info d-flex align-items-center">
                     <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
@@ -187,61 +181,53 @@
                   </div>
                   </div>
                 </div>
-                
               </div>
           </div>
-      </div>
-      
-      
-      
-      
-      
-      
-      
+        </div>  
     </div>
 </section>
 <!-- Testimonials section -->
-<section class="testimonials p-4">
-    <div class="container">
-        <h2 class="p-2">What People Say</h2>
-        <div class="container mt-5">
+<section class="testimonials">
+    <div class="container justify-content-center align-items-center mt-4">
+        <h2 class="p-4">What People Say</h2>
+        <div class="container">
           <div class="row d-flex justify-content-center align-items-center">
-              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="width: 18rem;">
-                  <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Card 1</h5>
-                                  <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle 1</h6>
-                                  <p class="card-text">Some quick example text for Card 1.</p>
+              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                  <div class="carousel-inner col-6">
+                      <div class="carousel-item active" style="max-height: 25rem;">
+                          <div class="card bg-black">
+                              <div class="card-body rounded-5 mx-auto p-3">
+                                  <h5 class="card-title"><iconify-icon icon="icomoon-free:quotes-left" style="color: #eb6424;" width="30" height="30"></iconify-icon></h5>
+                                  <h6 class="card-subtitle mb-2 text-white" style="font-size: 1.1rem;">Delicious flavors and fresh ingredients! The chicken bowl was a hit at our dinner table. Will definitely order again.</h6>
+                                  <p class="card-text text-white">Amy Kalis</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item" style="max-height: 25rem;">
+                          <div class="card bg-black">
+                              <div class="card-body rounded-5 mx-auto p-3">
+                                  <h5 class="card-title"><iconify-icon icon="icomoon-free:quotes-left" style="color: #eb6424;" width="30" height="30"></iconify-icon></h5>
+                                  <h6 class="card-subtitle mb-2 text-white" style="font-size: 1.1rem;">Amazing fish bowl! The combination of ingredients was perfect. Prompt delivery and great service. Thanks!</h6>
+                                  <p class="card-text text-white">Alex Rodriguez</p>
                               </div>
                           </div>
                       </div>
                       <div class="carousel-item">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Card 2</h5>
-                                  <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle 2</h6>
-                                  <p class="card-text">Some quick example text for Card 2.</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="carousel-item">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Card 2</h5>
-                                  <h6 class="card-subtitle mb-2 text-body-secondary">Subtitle 2</h6>
-                                  <p class="card-text">Some quick example text for Card 2.</p>
+                          <div class="card bg-black">
+                              <div class="card-body rounded-5 mx-auto p-3">
+                                  <h5 class="card-title"><iconify-icon icon="icomoon-free:quotes-left" style="color: #eb6424;" width="30" height="30"></iconify-icon></h5>
+                                  <h6 class="card-subtitle mb-2 text-white" style="font-size: 1.1rem;">Vegetarian bowl was a delight! Loved the variety of veggies and the flavorful dressing.</h6>
+                                  <p class="card-text text-white">Emily Johnson</p>
                               </div>
                           </div>
                       </div>
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                   </button>
                   <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                   </button>
               </div>
@@ -251,16 +237,18 @@
 </section>
 <!-- Newsletter section -->
 <section class="newsletter">
-  <div class="container align-items-center">
+  <div class="container justify-content-center align-items-center mt-4">
     <h2 class="p-4">Subscribe to our newsletter</h2>
-    <form>
-      <div class="mb-3">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <form class="row g-3">
+      <div class="mb-3 col-12 col-md-8 mx-auto newsletter-box">
+          <div id="emailHelp" class="form-text fw-bold mb-2 display-4">Never miss out on limited-time offers and special discounts!</div>
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <div class="input-group gap-2">
+              <input type="email" class="form-control border-black rounded-1" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <button type="submit" class="btn btn-primary rounded-1 bg-black rounded-1 border-black col-12 col-md-3">Subscribe</button>
+          </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+  </form>
   </div>
 </section>
 {% endblock %}
