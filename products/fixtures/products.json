@@ -1,0 +1,227 @@
+[
+    {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "name": "Grilled Chicken Caesar Bowl",
+        "calories": 450,
+        "weight": 400,
+        "preparation_time": "20 min",
+        "description": "Grilled chicken breast over crisp romaine lettuce, cherry tomatoes, Parmesan cheese, and Caesar dressing.",
+        "price": "12.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+        "category": 1,
+        "name": "Buffalo Chicken Quinoa Bowl",
+        "calories": 520,
+        "weight": 420,
+        "preparation_time": "25 min",
+        "description": "Spicy buffalo chicken, quinoa, black beans, corn, and avocado with a creamy ranch dressing.",
+        "price": "14.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "name": "Lemon Herb Chicken and Vegetable Rice Bowl",
+        "calories": 480,
+        "weight": 450,
+        "preparation_time": "30 min",
+        "description": "Lemon herb-marinated chicken with roasted vegetables and jasmine rice, topped with a light lemon vinaigrette.",
+        "price": "13.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 4,
+      "fields": {
+        "category": 1,
+        "name": "Thai Peanut Chicken Noodle Bowl",
+        "calories": 420,
+        "weight": 380,
+        "preparation_time": "15 min",
+        "description": "Shredded chicken, rice noodles, bell peppers, and snap peas in a Thai-inspired peanut sauce.",
+        "price": "11.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 5,
+      "fields": {
+        "category": 2,
+        "name": "Grilled Salmon and Avocado Quinoa Bowl",
+        "calories": 550,
+        "weight": 400,
+        "preparation_time": "20 min",
+        "description": "Grilled salmon on a bed of quinoa, avocado, cucumber, and a citrusy dill dressing.",
+        "price": "15.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 6,
+      "fields": {
+        "category": 2,
+        "name": "Mango Salsa Tuna Bowl",
+        "calories": 420,
+        "weight": 370,
+        "preparation_time": "15 min",
+        "description": "Light tuna, mango salsa, black beans, and brown rice with a hint of lime.",
+        "price": "12.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 7,
+      "fields": {
+        "category": 2,
+        "name": "Coconut Shrimp and Pineapple Bowl",
+        "calories": 480,
+        "weight": 420,
+        "preparation_time": "25 min",
+        "description": "Crispy coconut shrimp, pineapple chunks, and steamed broccoli over coconut rice.",
+        "price": "13.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 8,
+      "fields": {
+        "category": 2,
+        "name": "Teriyaki Glazed Mahi-Mahi Bowl",
+        "calories": 500,
+        "weight": 450,
+        "preparation_time": "30 min",
+        "description": "Mahi-mahi fillet glazed with teriyaki sauce, served with stir-fried bok choy and brown rice.",
+        "price": "14.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 9,
+      "fields": {
+        "category": 4,
+        "name": "Mushroom and Spinach Pesto Quinoa Bowl",
+        "calories": 420,
+        "weight": 380,
+        "preparation_time": "20 min",
+        "description": "Sautéed mushrooms and spinach with quinoa, cherry tomatoes, and a basil pesto drizzle.",
+        "price": "11.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 10,
+      "fields": {
+        "category": 4,
+        "name": "Chickpea and Sweet Potato Buddha Bowl",
+        "calories": 450,
+        "weight": 400,
+        "preparation_time": "25 min",
+        "description": "Roasted chickpeas, sweet potato cubes, kale, and tahini dressing over a bed of quinoa.",
+        "price": "13.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 11,
+      "fields": {
+        "category": 4,
+        "name": "Eggplant and Tomato Caprese Bowl",
+        "calories": 380,
+        "weight": 370,
+        "preparation_time": "15 min",
+        "description": "Grilled eggplant, cherry tomatoes, fresh mozzarella, and balsamic glaze over couscous.",
+        "price": "12.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 12,
+      "fields": {
+        "category": 4,
+        "name": "Mexican Street Corn Salad Bowl",
+        "calories": 400,
+        "weight": 400,
+        "preparation_time": "20 min",
+        "description": "Corn salad with black beans, avocado, cherry tomatoes, and a lime-cilantro dressing.",
+        "price": "11.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 13,
+      "fields": {
+        "category": 3,
+        "name": "Korean BBQ Beef Bibimbap Bowl",
+        "calories": 520,
+        "weight": 420,
+        "preparation_time": "25 min",
+        "description": "Korean marinated beef, pickled vegetables, and a fried egg over a bed of rice.",
+        "price": "14.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 14,
+      "fields": {
+        "category": 3,
+        "name": "Beef and Broccoli Brown Rice Bowl",
+        "calories": 480,
+        "weight": 450,
+        "preparation_time": "30 min",
+        "description": "Tender beef slices with broccoli florets in a savory soy-ginger sauce over brown rice.",
+        "price": "13.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 15,
+      "fields": {
+        "category": 3,
+        "name": "Spicy Chipotle Beef Burrito Bowl",
+        "calories": 450,
+        "weight": 380,
+        "preparation_time": "20 min",
+        "description": "Spiced beef, black beans, corn, and salsa over cilantro-lime rice with a chipotle mayo drizzle.",
+        "price": "12.99",
+        "image": null
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 16,
+      "fields": {
+        "category": 3,
+        "name": "Philly Cheesesteak Bowl",
+        "calories": 550,
+        "weight": 400,
+        "preparation_time": "25 min",
+        "description": "Sautéed beef strips with bell peppers, onions, and melted provolone cheese over cauliflower rice.",
+        "price": "15.99",
+        "image": null
+      }
+    }
+  ]
+  
