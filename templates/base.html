@@ -68,7 +68,13 @@
                               {% endif %}
                           </ul>
                       </li>
-                      <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">€0.00</a></li>
+                      <li class="nav-item"><a href="#" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link link-body-emphasis px-2">
+                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        €0.00
+                                    {% endif %}
+                      </a></li>
                   </ul>
               </div>
           </div>
@@ -109,7 +115,7 @@
   <!-- Search box -->
     <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2 bg-black">
       <form class="col-12 col-lg-6 mb-lg-0 d-flex" role="search">
-        <input class="form-control me-2 search-box" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2 search-box" type="search" placeholder="Search" name="q" aria-label="Search">
         <button class="btn btn-secondary bg-black" type="submit">Search</button>
       </form>
     </div>

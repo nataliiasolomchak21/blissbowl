@@ -70,6 +70,7 @@ a {
 
 /* Styles sections */
 .categories,
+.free-delivery,
 .products,
 .testimonials,
 .newsletter {
@@ -170,6 +171,10 @@ a {
     background-color: #191515;
     padding: .4rem;
     text-align: center;
+}
+
+.free-delivery {
+    background-color: #E0E8E0;
 }
 
 /* Styles newsletter section */
