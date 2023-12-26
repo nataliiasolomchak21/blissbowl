@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Product
+import json
 
 # Create your views here.
 def all_products(request):

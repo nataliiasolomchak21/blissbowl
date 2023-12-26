@@ -74,7 +74,7 @@
       "pk": 6,
       "fields": {
         "category": 2,
-        "name": "Mango Salsa Tuna Bowl",
+        "name": "Mango Salsa Sweet Tuna Bowl",
         "calories": 420,
         "weight": 370,
         "preparation_time": "15 min",
@@ -214,7 +214,7 @@
       "pk": 16,
       "fields": {
         "category": 3,
-        "name": "Philly Cheesesteak Bowl",
+        "name": "Philly Cheesesteak Beef Bowl",
         "calories": 550,
         "weight": 400,
         "preparation_time": "25 min",

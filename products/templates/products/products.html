@@ -48,80 +48,30 @@
         <h2 class="p-4">Our Bowls</h2>
         <div class="container d-flex justify-content-center align-items-center">
           <div class="row">
-              <!-- Carousel for small screens -->
-              <div id="productCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                      <!-- Card 1 content -->
-                      {{ products }}
-                      <!-- Card 2 content -->
-                      <div class="carousel-item">
-                          <div class="card product-box rounded-5" style="max-width: 350px; max-height: 540px;">
-                              <img src="/static/media/coconut-shrimp-pineapple-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2">
-                                  <h5 class="card-title p-2" style="font-size: 1.5rem;">Coconut Shrimp Pineapple Bowl</h5>
-                                  <a href="#" class="fish-category p-1 mt-1 mx-2" style="font-size: .8rem;">Fish Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">$20.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Card 3 content -->
-                      <div class="carousel-item">
-                          <div class="card product-box rounded-5" style="max-width: 350px; max-height: 540px;">
-                              <img src="/static/media/beef-broccoli-brown-rice-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2" style="font-size: 1.5rem;">
-                                  <h5 class="card-title p-2">Beef Broccoli Brown Rice Bowl</h5>
-                                  <a href="#" class="beef-category p-1 mt-1 mx-2" style="font-size: .8rem;">Beef Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">$25.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Card 4 content -->
-                      <div class="carousel-item">
-                          <div class="card product-box rounded-5" style="max-width: 340px; max-height: 540px;">
-                              <img src="/static/media/chickpea-and-sweet-potato-buddha-bowl .png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2" style="font-size: 1.5rem;">
-                                  <h5 class="card-title p-2">Chicken Pea Sweet Potato Bowl</h5>
-                                  <a href="#" class="veggie-category p-1 mt-1 mx-2" style="font-size: .8rem;">Veggie Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">$30.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Previous and Next buttons -->
-                  <button class="carousel-control-prev p-2" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon bg-black p-1" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
               <!-- Cards for larger screens -->
-              <div class="col-12 d-none d-md-flex flex-wrap justify-content-center gap-4">
-                {{ products }}
-                </div>
-                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/chickpea-and-sweet-potato-buddha-bowl .png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                  <div class="card-body p-2">
-                    <h5 class="card-title p-2">Chicken Pea Sweet Potato Bowl</h5>
-                    <a href="#" class="veggie-category p-1 mt-1 mx-2" style="font-size: .8rem;">Veggie Bowls</a>
-                    <div class="price-info d-flex align-items-center">
-                    <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
-                    <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                  </div>
-                  </div>
-                </div>
-              </div>
+              <div class="col-12 d-md-flex flex-wrap justify-content-center gap-4">
+                {% for product in products %}
+                    <div class="card product-box rounded-5 mb-2" style="max-width: 300px; max-height: 480px;">
+                        {% if product.image %}
+                            <a href="">
+                                <img class="card-img-top rounded-5 p-3 mt-3" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        {% else %}
+                            <a href="">
+                                <img class="card-img-top rounded-5 p-3 mt-3" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                        <div class="card-body p-2">
+                            <h5 class="card-title p-2">{{ product.name }}</h5>
+                            <a href="#" class="mt-1 mx-2 p-1 {% if product.category|lower == 'chicken' %}chicken-category{% elif product.category|lower == 'fish' %}fish-category{% elif product.category|lower == 'beef' %}beef-category{% elif product.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;">{{ product.category }} Bowls</a>
+                            <div class="price-info d-flex align-items-center">
+                                <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€{{ product.price }}</p>
+                                <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
           </div>
         </div>  
     </div>
