@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<section class="cart" style="position: relative; top: 100px;">
+    <div class="container justify-content-center align-items-center mt-4 p-4 mb-5">
+        <h2>Cart</h2>
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col">
+                {% if bag_items %}
+                <div class="table-responsive rounded">
+                </div>
+                {% else %}
+                <p class="mt-4" style="font-size: 1.2rem;">There is nothing here yet.</p>
+                <div class="d-grid gap-2 mt-4 col-4">
+                    <a class="btn btn-primary bg-black text-white border-black fw-bold" type="button">Order Now</a>
+                  </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

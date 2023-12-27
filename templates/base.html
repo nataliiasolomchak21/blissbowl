@@ -68,7 +68,7 @@
                               {% endif %}
                           </ul>
                       </li>
-                      <li class="nav-item"><a href="#" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link link-body-emphasis px-2">
+                      <li class="nav-item"><a href="{% url 'view_cart' %}" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link link-body-emphasis px-2">
                         {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
