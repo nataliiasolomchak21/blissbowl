@@ -12,7 +12,6 @@ def all_products(request):
     query = None
     categories = None
 
-
     if request.GET:    
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -28,10 +27,14 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+            if not products:
+                messages.info(request, f"Sorry, nothing found for '{query}'.")
+        
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'selected_category': request.GET.get('category'),  # Add this line to pass the selected category
     }
 
     return render(request, 'products/products.html', context)

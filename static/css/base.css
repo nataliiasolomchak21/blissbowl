@@ -105,6 +105,12 @@ a {
     border: 2px solid;
     border-radius: 0.9375rem;
     font-size: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.category-body:hover {
+    background-color: #191515;
+    color: #fff;
 }
 
 .chicken-category {
@@ -155,13 +161,8 @@ a {
 }
 
 .veggie-category a {
-    color: #23301E;
+    color: #57724C;
     font-weight: 600;
-}
-
-.category-body.active {
-    background-color: #ffcc00; /* Change to your desired highlight color */
-    color: #fff; /* Change to your desired text color */
 }
 
 .product-box {
