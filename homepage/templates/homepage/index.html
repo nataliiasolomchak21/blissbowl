@@ -17,7 +17,7 @@
           <h1>Discover culinary delights in every bowl!</h1>
           <p>Join BlissBowl on a culinary journey – explore our menu and find your favorite bowl today!</p>
           <div>
-              <h4><a href="#" class="btn btn-primary border-black bg-black rounded-5 text-white mt-2">Explore Our Bowls</a></h4>
+              <h4><a href="{% url 'products' %}" class="btn btn-primary border-black bg-black rounded-5 text-white mt-2">Explore Our Bowls</a></h4>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
     <div class="container bg-yellow">
         <div class="delivery d-flex justify-content-center align-items-center gap-4 p-3">
             <h5 class="fw-bold">Get free delivery on orders over {{ free_delivery_threshold }}!</h5>
-            <a href="" class="order-btn details-btn text-white">Order Now</a>
+            <a href="{% url 'products' %}" class="order-btn details-btn text-white">Order Now</a>
         </div>
     </div>
 </section>
@@ -70,7 +70,7 @@
     <div class="container justify-content-center align-items-center mx-auto mt-4">
       <div class="heading-box d-flex justify-content-between p-4 gap-3">
         <h2>Our Bowls</h2>
-        <a href="" class="bg-black rounded-5 text-white details-btn" style="width: 6rem;">See All</a>
+        <a href="{% url 'products' %}" class="bg-black rounded-5 text-white details-btn" style="width: 6rem;">See All</a>
         </div>
         <div class="container d-flex justify-content-center align-items-center">
           <div class="row">
@@ -158,7 +158,7 @@
                   </div>
                 </div>
                 <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/Coconut Shrimp and Pineapple Bowl Fish.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
+                  <img src="/static/media/coconut-shrimp-pineapple-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
                   <div class="card-body p-2">
                     <h5 class="card-title p-2">Coconut Shrimp Pineapple Bowl</h5>
                     <a href="#" class="fish-category p-1 mt-1 mx-2" style="font-size: .8rem;">Fish Bowls</a>
@@ -180,7 +180,7 @@
                   </div>
                 </div>
                 <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/chickpea-and-sweet-potato-buddha-bowl .png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
+                  <img src="/static/media/chickpea-and-sweet-potato-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
                   <div class="card-body p-2">
                     <h5 class="card-title p-2">Chicken Pea Sweet Potato Bowl</h5>
                     <a href="#" class="veggie-category p-1 mt-1 mx-2" style="font-size: .8rem;">Veggie Bowls</a>

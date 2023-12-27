@@ -78,9 +78,18 @@ a {
     top: 50px;
 }
 
+.product-detail {
+    position: relative;
+    top: 100px;
+}
+
+.product-details-container {
+    padding: 1.5rem;
+}
+
 /* Styles cards in category section */
 .category-card {
-    width: 100%;
+    width: 90%;
     height: 4rem;
     border-color: transparent;
     background-color: transparent;
@@ -239,6 +248,10 @@ a {
 
     .category-card {
         width: 17rem;
+    }
+
+    .product-details-container {
+        padding: 0;
     }
 }
 
