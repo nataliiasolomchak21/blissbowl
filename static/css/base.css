@@ -159,6 +159,11 @@ a {
     font-weight: 600;
 }
 
+.category-body.active {
+    background-color: #ffcc00; /* Change to your desired highlight color */
+    color: #fff; /* Change to your desired text color */
+}
+
 .product-box {
     border: 2px solid #191515;
     border-radius: 1.8rem;

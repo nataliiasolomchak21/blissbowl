@@ -96,10 +96,10 @@
                           Categories
                       </a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Chicken Bowls</a></li>
-                          <li><a class="dropdown-item" href="#">Fish Bowls</a></li>
-                          <li><a class="dropdown-item" href="#">Beef Bowls</a></li>
-                          <li><a class="dropdown-item" href="#">Veggie Bowls</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Chicken">Chicken Bowls</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Fish">Fish Bowls</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Beef">Beef Bowls</a></li>
+                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Veggie">Veggie Bowls</a></li>
                       </ul>
                   </li>
                   <li class="nav-item">
@@ -114,7 +114,7 @@
   </nav>
   <!-- Search box -->
     <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2 bg-black">
-      <form class="col-12 col-lg-6 mb-lg-0 d-flex" role="search">
+      <form method="get" action="{% url 'products' %}" class="col-12 col-lg-6 mb-lg-0 d-flex" role="search">
         <input class="form-control me-2 search-box" type="search" placeholder="Search" name="q" aria-label="Search">
         <button class="btn btn-secondary bg-black" type="submit">Search</button>
       </form>
