@@ -20,6 +20,7 @@
                         <thead class="text-black">
                             <tr>
                                 <th scope="col"></th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Subtotal</th>
@@ -39,9 +40,6 @@
                                 <td class="py-3 w-25">
                                     {{ item.quantity }}
                                 </td>
-                                <td class="py-3">
-                                    <p class="my-0">${{ item.product.price }}</p>
-                                </td>
                             </tr>
                         {% endfor %}
                     </table>
@@ -59,7 +57,7 @@
                             <span class="text-uppercase">Back to Products</span>
                         </a>
                         <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                            <span class="text-uppercase">Secure Checkout</span>
+                            <span class="text-uppercase">Go to Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
                             </span>
