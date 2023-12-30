@@ -33,6 +33,7 @@ header {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* Styles logo */

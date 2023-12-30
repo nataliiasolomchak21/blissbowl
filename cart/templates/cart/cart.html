@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -27,21 +28,52 @@
                             </tr>
                         </thead>
                         {% for item in cart_items %}
-                            <tr>
-                                <td class="p-3 w-25">
-                                    <img src="{{ item.product.image.url}}" class="img-fluid rounded">
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">{{ item.product.name }}</p>
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">€{{ item.product.price }}</p>
-                                </td>
-                                <td class="py-3 w-25">
-                                    {{ item.quantity }}
-                                </td>
-                            </tr>
-                        {% endfor %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group input-group-{{ item.item_id }}">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}"
+                                                    data-item_id="{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }}"
+                                                    data-item_id="{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <a class="update-link text-info"><small>Update</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
                     </table>
                     <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
@@ -56,7 +88,7 @@
                             </span>
                             <span class="text-uppercase">Back to Products</span>
                         </a>
-                        <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                        <a href="" class="btn btn-black rounded-0 btn-lg">
                             <span class="text-uppercase">Go to Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
@@ -67,11 +99,36 @@
                 {% else %}
                 <p class="mt-4" style="font-size: 1.2rem;">There is nothing here yet.</p>
                 <div class="d-grid gap-2 mt-4 col-4">
-                    <a class="btn btn-primary bg-black text-white border-black fw-bold" type="button">Order Now</a>
+                    <a href="{% url 'products' %}" class="btn btn-primary bg-black text-white border-black fw-bold" type="button">Order Now</a>
                   </div>
                 {% endif %}
             </div>
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block postloadjs %}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+    // Update quantity on click
+$('.update-link').click(function(e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
+});
+
+// Remove item and reload on click
+$('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/cart/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken};
+
+    $.post(url, data)
+     .done(function() {
+         location.reload();
+     });
+});
+
+</script>
 {% endblock %}
