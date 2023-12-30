@@ -33,6 +33,7 @@
                     <p class="small mt-1 mb-0">
                         <a class="p-1 {% if product.category|lower == 'chicken' %}chicken-category{% elif product.category|lower == 'fish' %}fish-category{% elif product.category|lower == 'beef' %}beef-category{% elif product.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;"" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }} Bowls</a>
                     </p>
+                    {% endif %}
                     <div class="info-box d-flex justify-content-center align-items-center mt-4 gap-5 text-center">
                         <div class="calories-box">
                             <iconify-icon icon="fluent-mdl2:calories" style="color: #eb6424;" width="40" height="40"></iconify-icon>
@@ -52,10 +53,6 @@
                         <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                             {% csrf_token %}
                             <div class="form-row">
-                                {% with product.has_sizes as s %}
-                                {% if s %}
-                        
-                                {% endif %}
                                 <div class="col-12">
                                     <div class="form-group d-flex gap-4">
                                         <p class="fw-bold mt-3" style="font-size: 1.7rem;">€{{ product.price}}</p>
@@ -85,15 +82,13 @@
                                 </div>
                                 <!-- Bootstrap buttons -->
                                 <div class="d-flex gap-2 mt-2">
-                                        <a class="btn btn-primary bg-black text-white border-black fw-bold p-2" style="font-size: 1rem;">Add to Favourites</a>
                                     <input type="submit" class="btn btn-primary bg-black text-white border-black fw-bold" value="Add to Cart">
+                                    <a class="btn btn-primary bg-black text-white border-black fw-bold p-2" style="font-size: 1rem;">Add to Favourites</a>
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                {% endwith %}
                             </div>
                         </form>
                     </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
