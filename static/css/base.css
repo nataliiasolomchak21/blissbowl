@@ -46,11 +46,23 @@ a {
     top: 72px;
     right: 15px;
     z-index: 99999999999;
-    background-color: #E0E8E0;
+    border: 1px solid #191515;
+    border-radius: .5rem;
 }
 
 .toast {
     overflow: visible;
+}
+
+.toast-body,
+.toast-header {
+    background-color: #E0E8E0;
+}
+
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
