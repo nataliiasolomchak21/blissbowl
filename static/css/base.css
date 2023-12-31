@@ -41,20 +41,18 @@ a {
     font-family: 'Playball', cursive;
 }
 
-.message-container {
+.toast-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
+    background-color: #E0E8E0;
 }
 
-.custom-toast {
+.toast {
     overflow: visible;
 }
 
-.toast-capper {
-    height: 2px;
-}
 
 /* Styles hero section */
 .home {
