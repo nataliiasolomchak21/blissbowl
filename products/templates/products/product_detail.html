@@ -99,49 +99,7 @@
 </section>
 {% endblock %}
 
-{% block scripts %}
-<script type="text/javascript">
-    // Increment quantity
-    $('.increment-qty').click(function(e) {
-        e.preventDefault();
-        const input = $(this).closest('.input-group').find('.qty_input');
-        const currentValue = parseInt(input.val());
-
-        if (currentValue < 99) {
-            const newValue = currentValue + 1;
-            input.val(newValue).data('new-quantity', newValue);
-        }
-    });
-
-    // Decrement quantity
-    $('.decrement-qty').click(function(e) {
-        e.preventDefault();
-        const input = $(this).closest('.input-group').find('.qty_input');
-        const currentValue = parseInt(input.val());
-
-        if (currentValue > 1) {
-            const newValue = currentValue - 1;
-            input.val(newValue).data('new-quantity', newValue);
-        }
-    });
-
-    // Handle "Add to Cart" button click
-    $('.add-to-cart').click(function(e) {
-        e.preventDefault();
-
-        const input = $(this).closest('.input-group').find('.qty_input');
-        const newQuantity = parseInt(input.data('new-quantity'));
-
-        // Log the item and quantity to check if it's correct
-        console.log(`Item ${itemId} added to cart with quantity ${newQuantity}`);
-
-        // Now you can perform the actual cart update logic here
-        // Update the cart in the session or perform any other cart update logic
-        // ...
-
-        // Optionally, you can redirect the user to the cart page or perform any other actions
-        // window.location.href = '/cart/';
-    });
-</script>
-
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
