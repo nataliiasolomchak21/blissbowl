@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -34,8 +34,8 @@
                         <span class="float-right">${{ total|floatformat:2 }}</span>
                     </p></strong>
                     {% if free_delivery_delta > 0 %}
-                        <p class="my-2 p-2 bg-white shadow-sm text-black text-center border-black border-1">
-                            Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
+                        <p class="my-2 p-2 bg-white shadow-sm text-black text-center border-black rounded-1">
+                            Spend <strong>${{ free_delivery_delta }}</strong> more to get free delivery!
                         </p>
                     {% endif %}
                     <a href="{% url 'view_cart' %}" class="btn btn-black bg-black text-white btn-block w-100 rounded-5 fw-bold">Go to Checkout
