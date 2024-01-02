@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<section class="cart" style="position: relative; top: 100px;">
+    <div class="container justify-content-center align-items-center mt-4 p-4 mb-5">
+        <h2>Thank you, your delivery is on the way!</h2>
+        <p>Your order information is below. A confirmation email will be sent to natalia200109@yahoo.com.</p>
+        <div class="row mt-3">
+            <div class="col-12 col-lg-6">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
