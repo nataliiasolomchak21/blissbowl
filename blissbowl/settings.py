@@ -132,8 +132,8 @@ DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
  }
 
-# print(os.environ.get("DATABASE_URL"))
-
+# Add the 'TIME_ZONE' parameter to the 'OPTIONS' dictionary
+DATABASES['default']['OPTIONS'] = {'timezone': 'UTC'}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
