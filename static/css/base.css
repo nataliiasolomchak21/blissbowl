@@ -227,9 +227,10 @@ a {
 /* Styles footer */
 .footer {
     position: relative;
+    bottom: 0px;
+    width: 100%;
     top: 150px;
     background-color: #57724C;
-    bottom: 0;
 }
 
 .logo-footer {
