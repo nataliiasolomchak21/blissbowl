@@ -133,7 +133,7 @@ DATABASES = {
  }
 
 # Add the 'TIME_ZONE' parameter to the 'OPTIONS' dictionary
-DATABASES['default']['OPTIONS'] = {'timezone': 'UTC'}
+# DATABASES['default']['OPTIONS'] = {'TIME_ZONE': 'UTC'}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
