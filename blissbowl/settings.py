@@ -121,23 +121,16 @@ WSGI_APPLICATION = 'blissbowl.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# Get the DATABASE_URL from environment variables
-database_url = os.environ.get("DATABASE_URL")
-
-# Set the PGOPTIONS environment variable with the timezone setting
-os.environ['PGOPTIONS'] = '-c timezone=UTC'
-
-# Parse the modified DATABASE_URL
 DATABASES = {
-    'default': dj_database_url.parse(database_url, conn_max_age=600),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#  }
 
 # Add the 'TIME_ZONE' parameter to the 'OPTIONS' dictionary
 # DATABASES['default']['OPTIONS'] = {'TIME_ZONE': 'UTC'}
