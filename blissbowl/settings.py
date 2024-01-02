@@ -128,9 +128,16 @@ WSGI_APPLICATION = 'blissbowl.wsgi.application'
 #     }
 # }
 
+# Get the DATABASE_URL from environment variables
+database_url = os.environ.get("DATABASE_URL")
+
+# Set the PGOPTIONS environment variable with the timezone setting
+os.environ['PGOPTIONS'] = '-c timezone=UTC'
+
+# Parse the modified DATABASE_URL
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
+    'default': dj_database_url.parse(database_url, conn_max_age=600),
+}
 
 # Add the 'TIME_ZONE' parameter to the 'OPTIONS' dictionary
 # DATABASES['default']['OPTIONS'] = {'TIME_ZONE': 'UTC'}
