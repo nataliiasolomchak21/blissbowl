@@ -1,1 +1,1 @@
-web: gunicorn blissbowl.wsgi
+web: gunicorn blissbowl.wsgi:application
