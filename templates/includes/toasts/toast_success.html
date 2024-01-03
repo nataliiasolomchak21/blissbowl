@@ -1,12 +1,14 @@
 <div class="toast-container">
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Success!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
     <div class="toast-body">
         <div class="row">
             <div class="col d-flex">
                 {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-            <hr class="mt-1 mb-3">
         </div>
         {% if grand_total and not on_profile_page %}
             <p class="logo-font text-black py-1">Your Cart ({{ product_count }})</p>

@@ -1,0 +1,39 @@
+.order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+.profile-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.delivery-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+.icon {
+    width: 2.75rem;
+    height: 2.4375rem;
+    background-color: #fff;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #191919;
+    transition: .3s ease-in-out;
+}
+
+.icon:hover {
+    background-color: #191919;
+}
+
+.delivery-info p {
+    font-size: 1rem;
+    padding-top: .7rem;
+}
