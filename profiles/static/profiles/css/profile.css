@@ -7,14 +7,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: .3rem;
 }
 
 .delivery-info {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .7rem;
+    gap: .4rem;
 }
 
 .icon {
@@ -36,4 +37,6 @@
 .delivery-info p {
     font-size: 1rem;
     padding-top: .7rem;
+    flex-wrap: wrap;
 }
+
