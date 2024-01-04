@@ -65,133 +65,50 @@
         </div>
     </div>
 </section>
-<!-- Products section -->
-<section class="products">
+<!-- About Us section -->
+<section class="about-us">
     <div class="container justify-content-center align-items-center mx-auto mt-4">
       <div class="heading-box d-flex justify-content-between p-4 gap-3">
-        <h2>Our Bowls</h2>
-        <a href="{% url 'products' %}" class="bg-black rounded-5 text-white details-btn" style="width: 6rem;">See All</a>
+        <h2 class="p-4">About Us</h2>
         </div>
         <div class="container d-flex justify-content-center align-items-center">
-          <div class="row">
-              <!-- Carousel for small screens -->
-              <div id="productCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                      <!-- Card 1 content -->
-                      <div class="carousel-item active">
-                          <div class="card product-box rounded-5" style="max-width: 350px; max-height: 540px;">
-                              <img src="/static/media/buffalo-chicken-quinoa-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2">
-                                  <h5 class="card-title p-2" style="font-size: 1.5rem;">Buffalo Chicken Quinoa Bowl</h5>
-                                  <a href="#" class="chicken-category p-1 mt-1 mx-2" style="font-size: .8rem;">Chicken Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Card 2 content -->
-                      <div class="carousel-item">
-                          <div class="card product-box rounded-5" style="max-width: 350px; max-height: 540px;">
-                              <img src="/static/media/coconut-shrimp-pineapple-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2">
-                                  <h5 class="card-title p-2" style="font-size: 1.5rem;">Coconut Shrimp Pineapple Bowl</h5>
-                                  <a href="#" class="fish-category p-1 mt-1 mx-2" style="font-size: .8rem;">Fish Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">$20.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Card 3 content -->
-                      <div class="carousel-item">
-                          <div class="card product-box rounded-5" style="max-width: 350px; max-height: 540px;">
-                              <img src="/static/media/beef-broccoli-brown-rice-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2" style="font-size: 1.5rem;">
-                                  <h5 class="card-title p-2">Beef Broccoli Brown Rice Bowl</h5>
-                                  <a href="#" class="beef-category p-1 mt-1 mx-2" style="font-size: .8rem;">Beef Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">$25.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Card 4 content -->
-                      <div class="carousel-item">
-                          <div class="card product-box rounded-5" style="max-width: 340px; max-height: 540px;">
-                              <img src="/static/media/chickpea-and-sweet-potato-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                              <div class="card-body p-2" style="font-size: 1.5rem;">
-                                  <h5 class="card-title p-2">Chicken Pea Sweet Potato Bowl</h5>
-                                  <a href="#" class="veggie-category p-1 mt-1 mx-2" style="font-size: .8rem;">Veggie Bowls</a>
-                                  <div class="price-info d-flex align-items-center">
-                                      <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">$30.00</p>
-                                      <a href="#" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Previous and Next buttons -->
-                  <button class="carousel-control-prev p-2" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon bg-black p-1" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
-              <!-- Cards for larger screens -->
-              <div class="col-12 d-none d-md-flex flex-wrap justify-content-center gap-4">
-                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/buffalo-chicken-quinoa-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                  <div class="card-body p-2">
-                    <h5 class="card-title p-2">Buffalo Chicken Quinoa Bowl</h5>
-                    <a href="#" class="chicken-category p-1 mt-1 mx-2" style="font-size: .8rem;">Chicken Bowls</a>
-                    <div class="price-info d-flex align-items-center">
-                    <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
-                    <a href="" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                  </div>
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-6 col-xl-5">
+          <img class="img-fluid rounded" loading="lazy" src="/media/about-us.jpg" alt="Fresh Food Bowl">
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+          <div class="row justify-content-xl-center">
+            <div class="col-12 col-xl-11">
+              <h2 class="mb-5"><span class="fw-bold">BlissBowl</span> - Fresh Food Bowls Delivered to Your Doorstep</h2>
+              <p class="mb-5">Experience the convenience of our prompt delivery service and exceptional customer care. We strive to make every meal a moment to savor, ensuring satisfaction with each bite.</p>
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                  <div class="d-flex">
+                    <div class="me-4 text-primary">
+                        <iconify-icon icon="carbon:delivery" style="color: #eb6424;" width="32" height="32"></iconify-icon>
+                    </div>
+                    <div>
+                      <h4 class="mb-3">Prompt Delivery</h4>
+                      <p class="text-secondary mb-0">Our efficient delivery ensures your fresh food bowl reaches you on time, every time.</p>
+                    </div>
                   </div>
                 </div>
-                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/coconut-shrimp-pineapple-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                  <div class="card-body p-2">
-                    <h5 class="card-title p-2">Coconut Shrimp Pineapple Bowl</h5>
-                    <a href="#" class="fish-category p-1 mt-1 mx-2" style="font-size: .8rem;">Fish Bowls</a>
-                    <div class="price-info d-flex align-items-center">
-                    <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
-                    <a href="" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                  </div>
-                  </div>
-                </div>
-                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/beef-broccoli-brown-rice-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                  <div class="card-body p-2">
-                    <h5 class="card-title p-2">Beef Broccoli Brown Rice Bowl</h5>
-                    <a href="#" class="beef-category p-1 mt-1 mx-2" style="font-size: .8rem;">Beef Bowls</a>
-                    <div class="price-info d-flex align-items-center">
-                    <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
-                    <a href="" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                  </div>
-                  </div>
-                </div>
-                <div class="card product-box rounded-5" style="max-width: 300px; max-height: 480px;">
-                  <img src="/static/media/chickpea-and-sweet-potato-bowl.png" class="card-img-top rounded-5 p-3 mt-3" alt="...">
-                  <div class="card-body p-2">
-                    <h5 class="card-title p-2">Chicken Pea Sweet Potato Bowl</h5>
-                    <a href="#" class="veggie-category p-1 mt-1 mx-2" style="font-size: .8rem;">Veggie Bowls</a>
-                    <div class="price-info d-flex align-items-center">
-                    <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€15.00</p>
-                    <a href="" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                  </div>
+                <div class="col-12 col-md-6">
+                  <div class="d-flex">
+                    <div class="me-4 text-primary">
+                        <iconify-icon icon="ri:customer-service-line" style="color: #eb6424;" width="32" height="32"></iconify-icon>
+                    </div>
+                    <div>
+                      <h4 class="mb-3">Customer Service Excellence</h4>
+                      <p class="text-secondary mb-0">Our dedicated customer service team is ready to assist you, ensuring a delightful experience with every order.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
+        </div>
+      </div>
         </div>  
     </div>
 </section>
