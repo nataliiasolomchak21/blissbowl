@@ -49,30 +49,37 @@
   <!-- Header -->
   <header class="mb-4">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-          <div class="navbar-box d-flex">
-              <a class="navbar-brand logo-font-text d-none d-sm-block" href="{% url 'homepage' %}">BlissBowl</a>
-              <div class="container d-flex flex-wrap ml-auto order-last-lg">
-                  <ul class="nav">
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <iconify-icon icon="ph:user" width="24" height="24" class="text-black mx-auto"></iconify-icon></a>
-                          <ul class="dropdown-menu">
-                              {% if request.user.is_authenticated %}
-                              {% if request.user.is_superuser %}
-                              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                              {% endif %}
-                              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                              {% else %}
-                              <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
-                              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                              {% endif %}
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+        <div class="container-fluid">
+            <a class="navbar-brand logo-font-text d-none d-lg-block" href="{% url 'homepage' %}">BlissBowl</a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="order-lg-2 ml-auto d-flex align-items-center">
+                <ul class="nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <iconify-icon icon="ph:user" width="24" height="24" class="text-black mx-auto"></iconify-icon>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'view_cart' %}">
                             <div class="d-flex gap-1">
                                 <div><iconify-icon icon="fluent:cart-20-regular" width="24" height="24"></iconify-icon></div>
                                 <p class="my-0">
@@ -85,40 +92,37 @@
                             </div>
                         </a>
                     </li>
-                  </ul>
-              </div>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse navbar-box" id="navbarSupportedContent">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="{% url 'products' %}">Products</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Categories
-                      </a>
-                      <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Chicken">Chicken Bowls</a></li>
-                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Fish">Fish Bowls</a></li>
-                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Beef">Beef Bowls</a></li>
-                          <li><a class="dropdown-item" href="{% url 'products' %}?category=Veggie">Veggie Bowls</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="">Favourites</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+                </ul>
+            </div>
+    
+            <div class="collapse navbar-collapse navbar-box" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=Chicken">Chicken Bowls</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=Fish">Fish Bowls</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=Beef">Beef Bowls</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=Veggie">Veggie Bowls</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Favourites</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
   <!-- Search box -->
     <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center p-2 bg-black">
       <form method="get" action="{% url 'products' %}" class="col-12 col-lg-6 mb-lg-0 d-flex" role="search">
