@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from checkout.models import Order
+from products.models import Product
+
 from .forms import UserProfileForm
 
 @login_required
@@ -47,5 +49,19 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def add_to_favourites(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+
+    if product in user_profile.favourite_bowls.all():
+        messages.warning(request, f"{product.name} is already in your favorites.")
+    else:
+        user_profile.favourite_bowls.add(product)
+        messages.success(request, f"{product.name} added to your favorites.")
+
+    return redirect('profile', product_id=product_id)
 
 
