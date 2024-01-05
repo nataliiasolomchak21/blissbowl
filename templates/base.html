@@ -78,9 +78,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}bg-black rounded-3 text-white font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}">
-                            <div class="d-flex gap-1">
+                            <div class="d-flex gap-1 mt-1">
                                 <div><iconify-icon icon="fluent:cart-20-regular" width="24" height="24"></iconify-icon></div>
                                 <p class="my-0">
                                     {% if grand_total %}
