@@ -113,9 +113,9 @@ a {
     top: 100px;
 }
 
-.product-details-container {
-    padding: 1.5rem;
-}
+/* .product-details-container {
+    padding: 1rem;
+} */
 
 /* Styles cards in category section */
 .category-card {

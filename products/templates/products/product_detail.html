@@ -59,38 +59,36 @@
                         <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                             {% csrf_token %}
                             <div class="form-row">
-                                <div class="col-12">
-                                    <div class="form-group d-flex gap-4">
-                                        <p class="fw-bold mt-3" style="font-size: 1.7rem;">€{{ product.price}}</p>
-                                            <div class="form-group w-50">
+                                    <div class="form-group d-flex gap-4 mt-3">
+                                        <p class="fw-bold" style="font-size: 1.7rem;">€{{ product.price}}</p>
+                                            <div class="form-group w-100">
                                                 <div class="input-group input-group-{{ product.id }}">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-black bg-black rounded-0 decrement-qty_{{ product.id }}" 
+                                                        <button class="decrement-qty btn rounded-0 decrement-qty_{{ product.id }}" style="background-color: #D3D3D3"
                                                             data-item_id="{{ product.id }}">
                                                             <span class="icon">
-                                                                <i class="fas fa-minus text-white"></i>
+                                                                <i class="fas fa-minus text-muted"></i>
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
+                                                    <input class="form-control qty_input id_qty_{{ product.id }} text-center" type="number"
                                                         name="quantity" value="1" min="1" max="99"
                                                         data-item_id="{{ product.id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-black bg-black rounded-0 increment-qty_{{ product.id }}"
+                                                        <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}" style="background-color: #D3D3D3"
                                                             data-item_id="{{ product.id }}">
                                                             <span class="icon">
-                                                                <i class="fas fa-plus text-white"></i>
+                                                                <i class="fas fa-plus text-muted"></i>
                                                             </span>
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                     </div>
-                                </div>
                                 <!-- Bootstrap buttons -->
-                                <div class="d-grid gap-2 mt-2">
+                                <div class="d-flex flex-column gap-2 mt-3">
                                     <input type="submit" class="btn btn-primary bg-black text-white border-black fw-bold w-100" value="Add to Cart">
-                                    <a class="btn btn-primary bg-black text-white border-black fw-bold p-2" style="font-size: 1rem;">Add to Favourites</a>
+                                    <a class="btn btn-primary bg-white text-black border-black fw-bold p-2 w-100" style="font-size: 1rem;">Add to Favourites</a>
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
@@ -98,8 +96,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">  
         </div>
     </div>
 </section>
