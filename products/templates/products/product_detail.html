@@ -86,16 +86,14 @@
                                             </div>
                                     </div>
                                 <!-- Bootstrap buttons -->
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <input type="submit" class="btn btn-primary bg-black text-white border-black fw-bold w-100" value="Add to Cart">
-                                    {% if user.is_authenticated %}
-                                        <form method="post" action="{% url 'add_to_favourites' product.id %}">
-                                            {% csrf_token %}
-                                            <button type="submit" class="btn btn-primary bg-white text-black border-black fw-bold p-2 w-100" style="font-size: 1rem;">Add to Favourites</button>
-                                        </form>
-                                    {% else %}
-                                    <button class="btn btn-primary bg-white text-black border-black fw-bold p-2 w-100" style="font-size: 1rem;"><a href="{% url 'account_login' %}">Add to Favourites</a></button>
-                                    {% endif %}
+                                <div class="col{% if s %}-12 mt-2{% endif %}">
+                                    <a href="{% url 'add_to_favourites' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
