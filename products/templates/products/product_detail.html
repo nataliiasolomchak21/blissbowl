@@ -31,7 +31,7 @@
                     <p class="text-black fw-bold" style="font-size: 1.7rem;">{{ product.name }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
-                        <a class="p-1 {% if product.category|lower == 'chicken' %}chicken-category{% elif product.category|lower == 'fish' %}fish-category{% elif product.category|lower == 'beef' %}beef-category{% elif product.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;"" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }} Bowls</a>
+                        <a class="p-1 {% if product.category|lower == 'chicken' %}chicken-category{% elif product.category|lower == 'fish' %}fish-category{% elif product.category|lower == 'beef' %}beef-category{% elif product.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.name }} Bowls</a>
                     </p>
                     {% endif %}
                     <div class="info-box d-flex justify-content-center align-items-center mt-4 gap-5 text-center">

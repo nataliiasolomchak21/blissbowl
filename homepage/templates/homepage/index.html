@@ -48,7 +48,7 @@
               </div>
               <div class="card category-card mb-1">
                   <div class="card-body category-body veggie-category">
-                    <span><iconify-icon icon="ph:carrot" style="color: #23301e;" width="30" height="30"></iconify-icon></span>
+                    <span><iconify-icon icon="ph:carrot" style="color: #57724C;" width="30" height="30"></iconify-icon></span>
                     <a href="{% url 'products' %}?category=Veggie" class="card-link">Veggie Bowls</a>
                   </div>
               </div>
@@ -60,17 +60,15 @@
 <section class="free-delivery mt-5">
     <div class="container bg-yellow">
         <div class="delivery d-flex justify-content-center align-items-center gap-4 p-3">
-            <h5 class="fw-bold">Get free delivery on orders over €{{ free_delivery_threshold }}!</h5>
+            <h5 class="fw-bold delivery-text">Get free delivery on orders over €{{ free_delivery_threshold }}!</h5>
             <a href="{% url 'products' %}" class="order-btn details-btn text-white">Order Now</a>
         </div>
     </div>
 </section>
 <!-- About Us section -->
 <section class="about-us">
-    <div class="container justify-content-center align-items-center mx-auto mt-4">
-      <div class="heading-box d-flex justify-content-between p-4 gap-3">
+    <div class="container justify-content-center align-items-center mt-5">
         <h2 class="p-4">About Us</h2>
-        </div>
         <div class="container d-flex justify-content-center align-items-center">
       <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
         <div class="col-12 col-lg-6 col-xl-5">
@@ -114,11 +112,11 @@
 </section>
 <!-- Testimonials section -->
 <section class="testimonials">
-    <div class="container justify-content-center align-items-center mt-4">
+    <div class="container justify-content-center align-items-center mt-2">
         <h2 class="p-4">What People Say</h2>
         <div class="container">
           <div class="row d-flex justify-content-center align-items-center">
-              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
                   <div class="carousel-inner col-6">
                       <div class="carousel-item active" style="max-height: 25rem;">
                           <div class="card bg-black">
@@ -160,21 +158,5 @@
           </div>
       </div>
     </div>
-</section>
-<!-- Newsletter section -->
-<section class="newsletter">
-  <div class="container justify-content-center align-items-center mt-4">
-    <h2 class="p-4">Subscribe to our newsletter</h2>
-    <form class="row g-3">
-      <div class="mb-3 col-12 col-md-8 mx-auto newsletter-box">
-          <div id="emailHelp" class="form-text fw-bold mb-2 display-4">Never miss out on limited-time offers and special discounts!</div>
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <div class="input-group gap-2">
-              <input type="email" class="form-control border-black rounded-1" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <button type="submit" class="btn btn-primary rounded-1 bg-black rounded-1 border-black col-12 col-md-3">Subscribe</button>
-          </div>
-      </div>
-  </form>
-  </div>
 </section>
 {% endblock %}

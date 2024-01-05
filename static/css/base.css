@@ -44,7 +44,7 @@ a {
 .toast-container {
     position: fixed;
     top: 72px;
-    left: 15px;
+    right: 15px;
     z-index: 99999999999;
     border: 1px solid #191515;
     border-radius: .5rem;
@@ -92,6 +92,10 @@ a {
 .home-text p {
     font-size: 1rem;
     font-weight: 500;
+}
+
+.delivery-text {
+    font-size: .9rem;
 }
 
 /* Styles sections */
@@ -179,7 +183,7 @@ a {
 }
 
 .veggie-category {
-    border: 2px solid #23301E;
+    border: 2px solid #57724C;
     background: #B1D6A2;
     color: #23301E;
     font-weight: 600;
@@ -357,6 +361,10 @@ a {
         font-size: 2.5rem;
     }
 
+    .delivery-text {
+        margin-top: .5rem;
+        font-size: 1.3rem;
+    }
     .category-card {
         width: 17rem;
     }

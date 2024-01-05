@@ -58,7 +58,7 @@
                         {% endif %}
                         <div class="card-body p-2">
                             <h5 class="card-title p-2">{{ product.name }}</h5>
-                            <a href="#" class="mt-1 mx-2 p-1 {% if product.category|lower == 'chicken' %}chicken-category{% elif product.category|lower == 'fish' %}fish-category{% elif product.category|lower == 'beef' %}beef-category{% elif product.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;">{{ product.category }} Bowls</a>
+                            <a href="{% url 'products' %}?category={{ product.category.name }}" class="mt-1 mx-2 p-1 {% if product.category|lower == 'chicken' %}chicken-category{% elif product.category|lower == 'fish' %}fish-category{% elif product.category|lower == 'beef' %}beef-category{% elif product.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;">{{ product.category }} Bowls</a>
                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
