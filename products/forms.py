@@ -1,6 +1,8 @@
 from django import forms
 from .widgets import CustomClearableFileInput
+
 from .models import Product, Category
+from .models import Comment
 
 class ProductForm(forms.ModelForm):
     class Meta:
@@ -19,3 +21,10 @@ class ProductForm(forms.ModelForm):
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['text']
+        widgets = {'text': forms.Textarea(attrs={'rows': 3})}

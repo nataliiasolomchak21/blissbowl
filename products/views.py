@@ -4,7 +4,10 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
 from .models import Product, Category
+from .models import Comment
+
 from .forms import ProductForm
+from .forms import CommentForm
 
 # Create your views here.
 def all_products(request):
@@ -48,12 +51,35 @@ def product_detail(request, product_id):
     A view to show product details of each product 
     """
     product = get_object_or_404(Product, pk=product_id)
+    comments = Comment.objects.filter(product=product)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.product = product
+            comment.user = request.user
+            comment.save()
+            return redirect('product_detail', product_id=product_id)
+    else:
+        form = CommentForm()
 
     context = {
         'product': product,
+        'comments': comments,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_comment(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        text = request.POST.get('text', '')
+        Comment.objects.create(product=product, user=request.user, text=text)
+
+    return redirect('product_detail', product_id=product_id)
 
 @login_required
 def add_product(request):
@@ -118,4 +144,6 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, "Product deleted!")
     return redirect(reverse('products'))
+
+
 
