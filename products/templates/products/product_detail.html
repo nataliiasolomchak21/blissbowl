@@ -142,8 +142,8 @@
                             <small class="text-muted">Comment at {{ comment.created_at }}</small>
                         <p class="mt-1">{{ comment.text }}</p>
                         {% if request.user == comment.user %}
-                            <a href="{{ comment.get_edit_url }}">Edit</a>
-                            <a href="{{ comment.get_delete_url }}">Delete</a>
+                            <a href="">Edit</a>
+                            <a href="">Delete</a>
                         {% endif %}
                     </div>
                     </div>
