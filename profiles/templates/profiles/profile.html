@@ -29,7 +29,7 @@
                 </div>
             <p class="text-center">Order History</p>
             </div>
-            <div class="info" data-option-type="favorites">
+            <div class="info" data-option-type="favourites">
                 <div class="icon">
                     <iconify-icon icon="mdi:heart-outline" style="color: #eb6424;" width="24" height="24"></iconify-icon>
                 </div>
@@ -38,10 +38,10 @@
         </div>
         <div id="personal-info" class="col-12 col-lg-6 justify-content-center align-items-center">
             <p class="text-muted">Default Delivery Information</p>
-            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+            <form class="mt-3 info-form" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black rounded-2 text-uppercase w-100">Update Information</button>
+                <button class="btn btn-black bg-black text-white rounded-2 w-100 mt-2">Update Information</button>
             </form>
         </div>
         <div id="order-history" class="col-12">
@@ -116,7 +116,7 @@
         });
 
         // Handle click on favorites
-        $('[data-option-type="favorites"]').on('click', function () {
+        $('[data-option-type="favourites"]').on('click', function () {
             $('#favourites').show();
             $('#personal-info, #order-history').hide();
         });

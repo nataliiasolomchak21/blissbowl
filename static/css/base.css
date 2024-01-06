@@ -113,9 +113,9 @@ a {
     top: 100px;
 }
 
-/* .product-details-container {
+.product-details-container {
     padding: 1rem;
-} */
+}
 
 /* Styles cards in category section */
 .category-card {
@@ -260,6 +260,12 @@ a {
 .social-media-links i {
     font-size: 1.7rem;
     margin-bottom: 1rem;
+}
+
+.info-form input {
+    margin-top: .5rem;
+    border: 1px solid #191919;
+    border-radius: .5rem;
 }
 
 /* Product Form */
