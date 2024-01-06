@@ -16,79 +16,86 @@
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col">
                 {% if cart_items %}
-                <div class="table-responsive rounded d-md-block">
-                    <div class="table-responsive">
+                <div class="rounded d-md-block">
+                    <div class="justify-content-center align-items-center mt-4">
                         {% for item in cart_items %}
                         <div class="row mb-3">
                             {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <div class="col-4 col-md-2">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" style="max-width: 100px;">
+                            </div>
                             {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            <div class="col-4 col-md-2">
+                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" style="max-width: 100px;">
+                            </div>
                             {% endif %}
-                            <div class="col-md-3">
+                            <div class="col-8 col-md-3">
                                 <p class="mb-0 d-none d-md-block"><strong>Name</strong></p>
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-4 col-md-2">
                                 <p class="mb-0 d-none d-md-block"><strong>Price</strong></p>
                                 <p class="my-0">${{ item.product.price }}</p>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-4 col-md-2">
                                 <p class="mb-0 d-none d-md-block"><strong>Qty</strong></p>
-                                    <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-                                        {% csrf_token %}
-                                        <div class="form-group">
-                                            <div class="input-group input-group-{{ item.item_id }}">
-                                                <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-sm btn-black bg-black rounded-0 decrement-qty_{{ item.item_id }}"
-                                                        data-item_id="{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-minus fa-sm text-white"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
-                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                    data-item_id="{{ item.item_id }}">
-                                                <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-sm btn-black bg-black rounded-0 increment-qty_{{ item.item_id }}"
-                                                        data-item_id="{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-plus fa-sm text-white"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
+                                <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group input-group-{{ item.item_id }}">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}"
+                                                    style="background-color: #D3D3D3" data-item_id="{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm text-muted"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} text-center" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }}"
+                                                    style="background-color: #D3D3D3" data-item_id="{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm text-muted"></i>
+                                                    </span>
+                                                </button>
                                             </div>
                                         </div>
-                                    </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
-                                </div>
-                                <div class="col-md-2">
-                                    <p class="mb-0 d-none d-md-block"><strong>Subtotal</strong></p>
-                                    <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                </div>
+                                    </div>
+                                </form>
+                                <div class="d-flex justify-content-center align-items-center gap-3">
+                                    <a class="update-link text-info text-center"><small>Update</small></a>
+                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                             </div>
+                            </div>
+                            <div class="col-4 col-md-3">
+                                <p class="mb-0 d-none d-md-block"><strong>Subtotal</strong></p>
+                                <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </div>
+                        </div>
+                        
                         {% endfor %}
                     </div>
-                    
+                    <div class="total-info border-black rounded-2 mt-3">
                     <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-1 text-danger">
+                        <p class="mb-3 mt-1 text-danger">
                             You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
                         </p>
                         {% endif %}
-                        <a href="{% url 'products' %}" class="btn btn-outline-black bg-black rounded-0 btn-lg">
-                            <span class="text-uppercase text-white">Back to Products</span>
+                        <div class="d-flex justify-content-center gap-3">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black bg-black rounded-2">
+                            <span class="text-white">Back to Products</span>
                         </a>
-                        <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                            <span class="text-uppercase">Go to Checkout</span>
-                            <span class="icon">
-                                <i class="fas fa-lock"></i>
-                            </span>
+                        <a href="{% url 'checkout' %}" class="btn btn-black bg-white border-black rounded-2">
+                            <span class="">Go to Checkout</span>
                         </a>
+                        </div>
+                    </div>
                 </div>
                 {% else %}
                 <p class="mt-4" style="font-size: 1.2rem;">There is nothing here yet.</p>
