@@ -2,6 +2,8 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth.models import User
 
+from cloudinary.models import CloudinaryField
+
 # Create your models here.
 class Category(models.Model):
     class Meta:
@@ -22,7 +24,7 @@ class Product(models.Model):
     description = models.TextField(verbose_name="Description")
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Price")
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = CloudinaryField("image", default="placeholder")
 
     def __str__(self):
         return self.name
