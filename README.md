@@ -271,7 +271,12 @@ I picked colors for the food bowl website to make it look appealing and match th
 
 ### Typography
 
+Playball:
 
+Playball is a font that looks like elegant handwriting. It gives a friendly and personal feel, which is great for making your food bowl website feel welcoming and like it's filled with handmade goodness.
+Plus Jakarta Sans:
+
+Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps people easily read and understand your website. It comes in different thickness levels (400, 500, 600), so you can use it for different parts of your site to make things stand out or look more important.
 
 ## ERD (Entity-Relationship Diagram)
 
@@ -303,10 +308,11 @@ I picked colors for the food bowl website to make it look appealing and match th
 * [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 * [Heroku](https://www.heroku.com) used for hosting the deployed site.
 - [Stripe](https://stripe.com) used for online secure payments.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Cloudinary](https://cloudinary.com/) used for online static file storage.
 * [Pillow](https://pypi.org/project/Pillow/) used for image processing
 * [Gunicorn](https://gunicorn.org/) used for WSGI server
-* [sycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter
+* [psycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter
+* [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate a privacy policy.
 * Chrome DevTools was used to check the responsiveness of the website as well as to debug it.
 * Chrome's Developer Tool Lighthouse was used to check the performance of the website.
 
