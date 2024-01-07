@@ -104,7 +104,7 @@
                         <a class="nav-link" href="{% url 'products' %}">Products</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Categories
                         </a>
@@ -163,8 +163,8 @@
     // Show the toast with autohide and delay options
     if (toastElement) {
         var toast = new bootstrap.Toast(toastElement, {
-            autohide: true,  // Set autohide to true for automatic hiding
-            delay: 5000       // Set the delay (in milliseconds) before hiding (e.g., 5000ms or 5 seconds)
+            autohide: true,  
+            delay: 5000   
         });
 
         toast.show();

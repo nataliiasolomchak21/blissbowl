@@ -73,20 +73,20 @@
                                         <div class="input-group input-group-{{ product.id }}">
                                             <div class="input-group-prepend">
                                                 <button
-                                                    class="decrement-qty btn rounded-0 decrement-qty_{{ product.id }}"
-                                                    style="background-color: #D3D3D3" data-item_id="{{ product.id }}">
+                                                    class="decrement-qty btn rounded-0"
+                                                    style="background-color: #D3D3D3" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                     <span class="icon">
                                                         <i class="fas fa-minus text-muted"></i>
                                                     </span>
                                                 </button>
                                             </div>
-                                            <input class="form-control qty_input id_qty_{{ product.id }} text-center"
-                                                type="number" name="quantity" value="1" min="1" max="99"
-                                                data-item_id="{{ product.id }}">
+                                            <input class="form-control qty_input text-center"
+                                                type="number" name="quantity" value="1" min="1" max="10"
+                                                data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">
                                                 <button
-                                                    class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
-                                                    style="background-color: #D3D3D3" data-item_id="{{ product.id }}">
+                                                    class="increment-qty btn btn-black rounded-0"
+                                                    style="background-color: #D3D3D3"  data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                     <span class="icon">
                                                         <i class="fas fa-plus text-muted"></i>
                                                     </span>
