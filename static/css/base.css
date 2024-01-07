@@ -70,7 +70,7 @@ a {
 .home {
     position: relative;
     top: 50px;
-    background: url('/static/media/hero-image.jpg') no-repeat center;
+    background: url('https://res.cloudinary.com/duqhvucdi/image/upload/v1704643206/static/media/hero-image.752f1bb4ab82.jpg') no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
