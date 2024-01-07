@@ -4,7 +4,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = '__all__'
+        exclude = ['user', 'favourite_bowls']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -18,14 +18,13 @@ class UserProfileForm(forms.ModelForm):
         }
 
         for field in self.fields:
-            if field != 'user':
-                if self.fields[field].required:
-                    placeholder = f'{placeholders.get(field, field)} *'
-                else:
-                    placeholder = placeholders.get(field, field)
+            if self.fields[field].required:
+                placeholder = f'{placeholders.get(field, field)} *'
+            else:
+                placeholder = placeholders.get(field, field)
 
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-                self.fields[field].widget.attrs['class'] = ('border-black'
-                                                        'rounded-2 '
-                                                        'profile-form-input')
-                self.fields[field].label = False
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = ('border-black'
+                                                    'rounded-2 '
+                                                    'profile-form-input')
+            self.fields[field].label = False
