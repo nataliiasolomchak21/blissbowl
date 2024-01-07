@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<section class="404" style="position: relative; top: 100px; min-height: 50vh;">
+    <div class="container justify-content-center align-items-center mt-4 p-4 mb-5">
+        <h2>404</h2>
+        <p>Sorry, the page you are looking for is not found.</p>
+        <a href="{% url 'homepage' %}" class="bg-black rounded-5 text-white w-100">Back to Homepage</a>
+{% endblock %}
