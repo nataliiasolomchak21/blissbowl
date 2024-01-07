@@ -257,7 +257,21 @@ I had 8 Design overall, each iteration had 3-5 issues.
 
 ### Colour Palette
 
+<details><summary><b>Contact Us</b></summary>
+
+![Color Palette](documentation/readme_files/colour-palette.png)
+</details>
+
+<details><summary><b>Contact Us</b></summary>
+
+![Color Palette](documentation/readme_files/colour-palette-two.png)
+</details>
+
+I picked colors for the food bowl website to make it look appealing and match the vibe of the delicious meals featured. The chosen colors aim to create a fresh and vibrant feel that suits the type of food on the site. I thought about what users would like and tried to make the website visually attractive, so it feels inviting and enjoyable as they explore the different offerings
+
 ### Typography
+
+
 
 ## ERD (Entity-Relationship Diagram)
 
