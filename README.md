@@ -142,21 +142,118 @@ View the live project [here](https://blissbowl-375a7f20caf7.herokuapp.com/)
 
 ### Agile Methodology
 
+For this project I used Agile methodology. Agile methodology is a project management approach that prioritizes cross-functional collaboration and continuous improvement. It divides projects into smaller phases and guides teams through cycles of planning, execution, and evaluation.
+
 #### Kanban Board
+
+<details><summary><b>Kanban Board</b></summary>
+
+![Kanban Board](documentation/readme_files/kanban-board.png)
+</details>
+
+This a visual representation of my Kanban Board during the project. In addition to three essential columns, I created a column "Product Backlog" later renamed into for the user stories that I wasn't able to implement.
+My process was divided into 8 Design (Milestones). Once the iteration is done, all of the user stories from that iteration were going to "Done" column. If any of the user stories from a particular iteration weren't implemented, they were going back to the Product Backlog.
 
 #### Iterations
 
+<details><summary><b>Iterations</b></summary>
+
+![Iterations](documentation/readme_files/iterations.png)
+</details>
+
+I had 8 Design overall, each iteration had 3-5 issues.
+
+[View here](https://github.com/nataliiasolomchak21/blissbowl/milestones)
+
 #### Issues
 
-#### Labels, Issues and MoSCoW prioritization
+[View here](https://github.com/nataliiasolomchak21/blissbowl/issues)
 
-#### Story Points
+#### Labels
 
-#### Won't Have For This Deployment
+![Labels](documentation/readme_files/labels.png)
+</details>
+
+#### Product Backlog
 
 ## UI
 
 ### Initial Design
+
+<details><summary><b>Sign Up</b></summary>
+
+![Design](documentation/readme_files/design-mobile-sign-up.png)
+</details>
+
+<details><summary><b>Sign In</b></summary>
+
+![Design](documentation/readme_files/design-mobile-login.png)
+</details>
+
+<details><summary><b>Log Out</b></summary>
+
+![Design](documentation/readme_files/design-mobile-logout.png)
+</details>
+
+<details><summary><b>Home</b></summary>
+
+![Design](documentation/readme_files/design-mobile-home.png)
+</details>
+
+<details><summary><b>Products</b></summary>
+
+![Design](documentation/readme_files/design-mobile-products.png)
+</details>
+
+<details><summary><b>Product Detail</b></summary>
+
+![Design](documentation/readme_files/design-mobile-product-detail.png)
+</details>
+
+<details><summary><b>Cart</b></summary>
+
+![Design](documentation/readme_files/design-mobile-shopping-cart.png)
+</details>
+
+<details><summary><b>Checkout</b></summary>
+
+![Design](documentation/readme_files/design-mobile-checkout.png)
+</details>
+
+<details><summary><b>Checkout Success</b></summary>
+
+![Design](documentation/readme_files/design-mobile-checkout-success.png)
+</details>
+
+<details><summary><b>Profile</b></summary>
+
+![Design](documentation/readme_files/design-mobile-profile-one.png)
+</details>
+
+<details><summary><b>Profile (empty)</b></summary>
+
+![Design](documentation/readme_files/design-mobile-profile-two.png)
+</details>
+
+<details><summary><b>Product Management 1</b></summary>
+
+![Design](documentation/readme_files/design-mobile-product-management-one.png)
+</details>
+
+<details><summary><b>Product Management 2</b></summary>
+
+![Design](documentation/readme_files/design-mobile-product-management-two.png)
+</details>
+
+<details><summary><b>Contact Us</b></summary>
+
+![Design](documentation/readme_files/design-mobile-contact.png)
+</details>
+
+<details><summary><b>Contact Us</b></summary>
+
+![Design](documentation/readme_files/design-mobile-privacy-policy.png)
+</details>
 
 ### Colour Palette
 
