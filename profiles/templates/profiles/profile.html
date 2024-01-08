@@ -57,7 +57,10 @@
                             </h2>
                             <div id="orderCollapse{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="orderHeading{{ order.id }}" data-bs-parent="#orderHistoryAccordion">
                                 <div class="accordion-body">
-                                    <strong>Order Number:</strong> {{ order.order_number }}<br>
+                                    <strong>Order Number:</strong> <a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">
+                                        {{ order.order_number|truncatechars:6 }}
+                                    </a><br>
                                     <strong>Items:</strong>
                                     <ul class="list-unstyled">
                                         {% for item in order.lineitems.all %}
