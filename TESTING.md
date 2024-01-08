@@ -66,6 +66,8 @@ Back to [README](README.md)
 
 [Jigsaw](https://jigsaw.w3.org/css-validator/) was used to check the validity of css file.
 
+
+
 ### JavaScript
 
 [JSHint](https://jshint.com/) was used for validation.

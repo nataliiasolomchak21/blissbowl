@@ -393,147 +393,159 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 
 <details><summary><b>Header</b></summary>
 
-![Design](documentation/readme_files/header-feature.png)
+![Features](documentation/readme_files/header-feature.png)
 </details>
 
 <details><summary><b>Footer</b></summary>
 
-![Design](documentation/readme_files/footer-feature.png)
+![Features](documentation/readme_files/footer-feature.png)
 </details>
 
 <details><summary><b>Search</b></summary>
 
-![Design](documentation/readme_files/search-feature.png)
+![Features](documentation/readme_files/search-feature.png)
 </details>
 
 <details><summary><b>About Us section</b></summary>
 
-![Design](documentation/readme_files/about-us-feature.png)
+![Features](documentation/readme_files/about-us-feature.png)
 </details>
 
 <details><summary><b>Testimonials section</b></summary>
 
-![Design](documentation/readme_files/testimonials-feature.png)
+![Features](documentation/readme_files/testimonials-feature.png)
 </details>
 
 <details><summary><b>Categories</b></summary>
 
-![Design](documentation/readme_files/categories-feature.png)
+![Features](documentation/readme_files/categories-feature.png)
 </details>
 
 <details><summary><b>Products</b></summary>
 
-![Design](documentation/readme_files/products-feature.png)
+![Features](documentation/readme_files/products-feature.png)
 </details>
 
 <details><summary><b>Product Detail</b></summary>
 
-![Design](documentation/readme_files/product-detail-feature.png)
+![Features](documentation/readme_files/product-detail-feature.png)
 </details>
 
 <details><summary><b>Add Product (Admin)</b></summary>
 
-![Design](documentation/readme_files/add-product-feature.png)
+![Features](documentation/readme_files/add-product-feature.png)
 </details>
 
 <details><summary><b>Edit Product (Admin)</b></summary>
 
-![Design](documentation/readme_files/edit-product-feature.png)
+![Features](documentation/readme_files/edit-product-feature.png)
 </details>
 
 <details><summary><b>Edit | Delete (Admin)</b></summary>
 
-![Design](documentation/readme_files/prod-man-edit-delete-btns-feature.png)
+![Features](documentation/readme_files/prod-man-edit-delete-btns-feature.png)
 </details>
 
 <details><summary><b>Profile (Delivery Info)</b></summary>
 
-![Design](documentation/readme_files/profile-info-feature.png)
+![Features](documentation/readme_files/profile-info-feature.png)
 </details>
 
 <details><summary><b>Profile (Order History)</b></summary>
 
-![Design](documentation/readme_files/profile-order-history-feature.png)
+![Features](documentation/readme_files/profile-order-history-feature.png)
 </details>
 
 <details><summary><b>Profile (Favourites)</b></summary>
 
-![Design](documentation/readme_files/profile-favourites-feature.png)
+![Features](documentation/readme_files/profile-favourites-feature.png)
 </details>
 
 <details><summary><b>Toast (Error)</b></summary>
 
-![Design](documentation/readme_files/toast-error-feature.png)
+![Features](documentation/readme_files/toast-error-feature.png)
 </details>
 <details><summary><b>Toast (Success)</b></summary>
 
-![Design](documentation/readme_files/toast-success-feature.png)
+![Features](documentation/readme_files/toast-success-feature.png)
 </details>
 <details><summary><b>Toast (Warning)</b></summary>
 
-![Design](documentation/readme_files/toast-warning-feature.png)
+![Features](documentation/readme_files/toast-warning-feature.png)
 </details>
 <details><summary><b>Toast (Info)</b></summary>
 
-![Design](documentation/readme_files/toast-info-feature.png)
+![Features](documentation/readme_files/toast-info-feature.png)
 </details>
 
 <details><summary><b>Sign Up</b></summary>
 
-![Design](documentation/readme_files/signup-feature.png)
+![Features](documentation/readme_files/signup-feature.png)
 </details>
 
 <details><summary><b>Sign In</b></summary>
 
-![Design](documentation/readme_files/login-feature.png)
+![Features](documentation/readme_files/login-feature.png)
 </details>
 
 <details><summary><b>Log Out</b></summary>
 
-![Design](documentation/readme_files/logout-feature.png)
+![Features](documentation/readme_files/logout-feature.png)
 </details>
 
 <details><summary><b>Email Verification</b></summary>
 
-![Design](documentation/readme_files/email-verification-one-feature.png)
+![Features](documentation/readme_files/email-verification-one-feature.png)
 </details>
 
 <details><summary><b>Email Verification (Message)</b></summary>
 
-![Design](documentation/readme_files/email-verification-feature.png)
+![Features](documentation/readme_files/email-verification-feature.png)
 </details>
 
 <details><summary><b>Comments</b></summary>
 
-![Design](documentation/readme_files/comments-feature.png)
+![Features](documentation/readme_files/comments-feature.png)
 </details>
 
 <details><summary><b>Contact</b></summary>
 
-![Design](documentation/readme_files/design-md-l-products.png)
+![Features](documentation/readme_files/design-md-l-products.png)
 </details>
 
 <details><summary><b>Shopping Cart</b></summary>
 
-![Design](documentation/readme_files/shopping-cart-feature.png)
+![Features](documentation/readme_files/shopping-cart-feature.png)
 </details>
 
 <details><summary><b>Checkout</b></summary>
 
-![Design](documentation/readme_files/checkout-feature.png)
+![Features](documentation/readme_files/checkout-feature.png)
 </details>
 
 <details><summary><b>Order Confirmation</b></summary>
 
-![Design](documentation/readme_files/order-confirmation-feature.png)
+![Features](documentation/readme_files/order-confirmation-feature.png)
 </details>
 
 <details><summary><b>Order Confirmation Email</b></summary>
 
-![Design](documentation/readme_files/order-confirmation-email-feature.png)
+![Features](documentation/readme_files/order-confirmation-email-feature.png)
 </details>
 
 ### Features Left to Implement
+
+* Remove products from Favourites option:
+ - Create better UX for the user
+* Password Reset (to seamlessly rest forgotten password)
+* FAQ Section:
+ - Include a frequently asked questions section to address common customer queries.
+* Filter Options:
+ - Allow users to filter products based on dietary restrictions.
+* Order Tracking:
+ - Implement order tracking so users can monitor the status of their deliveries.
+* Promotions and Discounts:
+ - Introduce promotional campaigns, discounts, or loyalty programs to attract and retain customers.
 
 ## Technologies Used
 
