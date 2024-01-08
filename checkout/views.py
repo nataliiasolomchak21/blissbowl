@@ -175,9 +175,6 @@ def checkout_success(request, order_number):
             [cust_email]
         )
 
-    # Send confirmation email
-    _send_confirmation_email(order)
-
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
@@ -189,5 +186,7 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-
+    
+     # Send confirmation email
+    _send_confirmation_email(order)
     return render(request, template, context)
