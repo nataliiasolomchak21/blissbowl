@@ -408,6 +408,13 @@ Through social media, we aim to cultivate a community of users, leveraging large
 
 ### Social Media Marketing
 
+Establishing a robust social media presence, characterized by active engagement, and seamlessly connecting it to your business website can significantly boost sales. Opting for widely used platforms with an extensive user community, like Facebook, often results in maximizing website visibility.
+
+![Facebook](documentation/readme_files/facebook-page-one.png)
+
+![Facebook](documentation/readme_files/facebook-page-two.png)
+
+
 ### Newsletter Marketing
 
 ## Testing
