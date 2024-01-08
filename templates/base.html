@@ -84,9 +84,9 @@
                                 <div><iconify-icon icon="fluent:cart-20-regular" width="24" height="24"></iconify-icon></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        €{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        $0.00
+                                        €0.00
                                     {% endif %}
                                 </p>
                             </div>
