@@ -599,8 +599,47 @@ Establishing a robust social media presence, characterized by active engagement,
 
 ![Facebook](documentation/readme_files/facebook-page-two.png)
 
-
 ### Newsletter Marketing
+
+I integrated a newsletter feature on the website, allowing users to sign up using their email addresses. To prevent duplicate sign-ups, I ensured the email addresses are unique, and if a user attempts to sign up again, a message informs them that they're already subscribed.
+
+```python
+def newsletter(request):
+    """ Signup to newsletter """
+    if request.method == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+
+            # Check if the email is not already subscribed
+            if not Newsletter.objects.filter(email=email).exists():
+                # Save the email to the database
+                newsletter = Newsletter(email=email)
+                newsletter.save()
+
+                # Send confirmation email
+                send_confirmation_email(email)
+
+                messages.success(request, 'You have successfully subscribed to our newsletter!')
+            else:
+                messages.error(request, 'This email is already subscribed to our newsletter.')
+            
+            return redirect(request.META.get('HTTP_REFERER', '/')) 
+
+    else:
+        form = NewsletterForm()
+
+    return render(request, 'homepage/index.html', {'form': form})
+
+def send_confirmation_email(email):
+    """Send newsletter signup confirmation email"""
+    subject = render_to_string(
+                'newsletter/welcome_newsletter_subject.txt')
+    message = render_to_string('newsletter/welcome_newsletter_body.txt', {'email': email})
+    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email])
+```
+
+Upon successful subscription, users receive a welcome email triggered by the send_mail() functionality in the views.py file. This email serves as a confirmation of their successful newsletter registration.
 
 ## Testing
 
