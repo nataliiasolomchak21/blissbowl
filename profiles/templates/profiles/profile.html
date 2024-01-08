@@ -47,51 +47,61 @@
         <div id="order-history" class="col-12 mt-4">
             <p class="text-muted">Order History</p>
             <div class="accordion" id="orderHistoryAccordion">
-                {% for order in orders %}
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="orderHeading{{ order.id }}">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#orderCollapse{{ order.id }}" aria-expanded="true" aria-controls="orderCollapse{{ order.id }}" style="background-color: #E0E8E0;">
-                                Date: {{ order.date }}
-                            </button>
-                        </h2>
-                        <div id="orderCollapse{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="orderHeading{{ order.id }}" data-bs-parent="#orderHistoryAccordion">
-                            <div class="accordion-body">
-                                <strong>Order Number:</strong> {{ order.order_number }}<br>
-                                <strong>Items:</strong>
-                                <ul class="list-unstyled">
-                                    {% for item in order.lineitems.all %}
-                                        <li class="small">
-                                            {{ item.product.name }} x{{ item.quantity }}
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                                <strong>Order Total:</strong> ${{ order.grand_total }}
+                {% if orders %}
+                    {% for order in orders %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="orderHeading{{ order.id }}">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#orderCollapse{{ order.id }}" aria-expanded="true" aria-controls="orderCollapse{{ order.id }}" style="background-color: #E0E8E0;">
+                                    Date: {{ order.date }}
+                                </button>
+                            </h2>
+                            <div id="orderCollapse{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="orderHeading{{ order.id }}" data-bs-parent="#orderHistoryAccordion">
+                                <div class="accordion-body">
+                                    <strong>Order Number:</strong> {{ order.order_number }}<br>
+                                    <strong>Items:</strong>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {{ item.product.name }} x{{ item.quantity }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                    <strong>Order Total:</strong> ${{ order.grand_total }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No orders yet.</p>
+                    <a href="{% url 'products' %}" class="btn btn-primary bg-black text-white border-black fw-bold" type="button">Order Now</a>
+                {% endif %}
+            </div>
+        </div>        
+        <div id="favourites" class="row container justify-content-center align-items-center gap-2">
+            <p class="text-muted">Favourites</p>
+            {% if favourite_bowls %}
+                {% for bowl in favourite_bowls %}
+                    <div class="card product-box rounded-5 mb-2" style="max-width: 300px; max-height: 480px;">
+                        {% if bowl.image %}
+                            <img class="card-img-top rounded-5 p-3 mt-3 image-fluid" src="{{ bowl.image.url }}" alt="{{ bowl.name }}">
+                        {% else %}
+                            <img class="card-img-top rounded-5 p-3 mt-3 image-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ bowl.name }}">
+                        {% endif %}
+                        <div class="card-body p-2">
+                            <h5 class="card-title p-2">{{ bowl.name }}</h5>
+                            <a href="{% url 'products' %}?category={{ bowl.category.name }}" class="mt-1 mx-2 p-1 {% if bowl.category|lower == 'chicken' %}chicken-category{% elif bowl.category|lower == 'fish' %}fish-category{% elif bowl.category|lower == 'beef' %}beef-category{% elif bowl.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;">{{ bowl.category }} Bowls</a>
+                            <div class="price-info d-flex align-items-center">
+                                <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€{{ bowl.price }}</p>
+                                <a href="{% url 'product_detail' bowl.id %}" class="bg-black rounded-5 text-white details-btn">More Details</a>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
-            </div>
-        </div>
-        <div id="favourites" class="row container justify-content-center align-items-center gap-2">
-            <p class="text-muted">Favourites</p>
-            {% for bowl in favourite_bowls %}
-            <div class="card product-box rounded-5 mb-2" style="max-width: 300px; max-height: 480px;">
-                {% if bowl.image %}
-                        <img class="card-img-top rounded-5 p-3 mt-3 image-fluid" src="{{ bowl.image.url }}" alt="{{ bowl.name }}">
-                {% else %}
-                        <img class="card-img-top rounded-5 p-3 mt-3 image-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ bowl.name }}">
+            {% else %}
+                <p style="font-size: 1.5rem;">No favourites yet.</p>
+                <a href="{% url 'products' %}" class="btn btn-primary bg-black text-white border-black fw-bold" type="button" style="max-width: fit-content;">Search Products</a>
                 {% endif %}
-                <div class="card-body p-2">
-                    <h5 class="card-title p-2">{{ bowl.name }}</h5>
-                    <a href="{% url 'products' %}?category={{ bowl.category.name }}" class="mt-1 mx-2 p-1 {% if bowl.category|lower == 'chicken' %}chicken-category{% elif bowl.category|lower == 'fish' %}fish-category{% elif bowl.category|lower == 'beef' %}beef-category{% elif bowl.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;">{{ bowl.category }} Bowls</a>
-                    <div class="price-info d-flex align-items-center">
-                        <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€{{ bowl.price }}</p>
-                        <a href="{% url 'product_detail' bowl.id %}" class="bg-black rounded-5 text-white details-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+        </div>        
 </div>
 </section>
 
