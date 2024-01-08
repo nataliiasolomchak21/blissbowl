@@ -149,10 +149,6 @@
                         <div class="comment-info p-2">
                             <small class="text-muted">Comment at {{ comment.created_at }}</small>
                         <p class="mt-1">{{ comment.text }}</p>
-                        {% if request.user == comment.user %}
-                            <a href="">Edit</a>
-                            <a href="">Delete</a>
-                        {% endif %}
                     </div>
                     </div>
                     {% endfor %}

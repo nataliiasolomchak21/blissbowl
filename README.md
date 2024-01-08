@@ -180,6 +180,8 @@ I had 8 Iterations overall, each iteration had 3-5 issues.
 
 ### Initial Design
 
+#### Mobile (360x740)
+
 <details><summary><b>Sign Up</b></summary>
 
 ![Design](documentation/readme_files/design-mobile-sign-up.png)
@@ -250,24 +252,91 @@ I had 8 Iterations overall, each iteration had 3-5 issues.
 ![Design](documentation/readme_files/design-mobile-contact.png)
 </details>
 
-<details><summary><b>Privacy Policy</b></summary>
+#### Tablet (768x1024) and Desktop (1440x1176)
 
-![Design](documentation/readme_files/design-mobile-privacy-policy.png)
+<details><summary><b>Sign Up</b></summary>
+
+![Design](documentation/readme_files/design-md-l-signup.png)
 </details>
+
+<details><summary><b>Sign In</b></summary>
+
+![Design](documentation/readme_files/design-md-l-login.png)
+</details>
+
+<details><summary><b>Log Out</b></summary>
+
+![Design](documentation/readme_files/design-md-l-logout.png)
+</details>
+
+<details><summary><b>Home</b></summary>
+
+![Design](documentation/readme_files/design-md-l-homepage.png)
+</details>
+
+<details><summary><b>Products</b></summary>
+
+![Design](documentation/readme_files/design-md-l-products.png)
+</details>
+
+<details><summary><b>Product Detail</b></summary>
+
+![Design](documentation/readme_files/design-md-l-product-detail.png)
+</details>
+
+<details><summary><b>Cart</b></summary>
+
+![Design](documentation/readme_files/design-md-l-shopping-cart.png)
+</details>
+
+<details><summary><b>Checkout</b></summary>
+
+![Design](documentation/readme_files/design-md-l-checkout.png)
+</details>
+
+<details><summary><b>Checkout Success</b></summary>
+
+![Design](documentation/readme_files/design-md-l-checkout-success.png)
+</details>
+
+<details><summary><b>Profile (Info)</b></summary>
+
+![Design](documentation/readme_files/design-md-l-profile-info.png)
+</details>
+
+<details><summary><b>Profile (Order History)</b></summary>
+
+![Design](documentation/readme_files/design-md-l-profile-order-history.png)
+</details>
+
+<details><summary><b>Profile (Favourites)</b></summary>
+
+![Design](documentation/readme_files/design-md-l-profile-favourites.png)
+</details>
+
+<details><summary><b>Product Management (Add Product)</b></summary>
+
+![Design](documentation/readme_files/design-md-l-add-product.png)
+</details>
+
+<details><summary><b>Product Management (Edit Product)</b></summary>
+
+![Design](documentation/readme_files/design-md-l-edit-product.png)
+</details>
+
+<details><summary><b>Contact Us</b></summary>
+
+![Design](documentation/readme_files/design-md-l-contact.png)
+</details>
+
 
 ### Colour Palette
 
-<details><summary><b>Contact Us</b></summary>
-
 ![Color Palette](documentation/readme_files/colour-palette.png)
-</details>
-
-<details><summary><b>Contact Us</b></summary>
 
 ![Color Palette](documentation/readme_files/colour-palette-two.png)
-</details>
 
-I picked colors for the food bowl website to make it look appealing and match the vibe of the delicious meals featured. The chosen colors aim to create a fresh and vibrant feel that suits the type of food on the site. I thought about what users would like and tried to make the website visually attractive, so it feels inviting and enjoyable as they explore the different offerings
+I picked these colors for the food bowl website to make it look appealing and match the vibe of the delicious meals featured. The chosen colors aim to create a fresh and vibrant feel that suits the type of food on the site. I thought about what users would like and tried to make the website visually attractive, so it feels inviting and enjoyable as they explore the different offerings
 
 ### Typography
 
