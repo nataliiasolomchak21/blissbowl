@@ -161,7 +161,7 @@ My process was divided into 8 Design (Milestones). Once the iteration is done, a
 ![Iterations](documentation/readme_files/iterations.png)
 </details>
 
-I had 8 Design overall, each iteration had 3-5 issues.
+I had 8 Iterations overall, each iteration had 3-5 issues.
 
 [View here](https://github.com/nataliiasolomchak21/blissbowl/milestones)
 
@@ -250,7 +250,7 @@ I had 8 Design overall, each iteration had 3-5 issues.
 ![Design](documentation/readme_files/design-mobile-contact.png)
 </details>
 
-<details><summary><b>Contact Us</b></summary>
+<details><summary><b>Privacy Policy</b></summary>
 
 ![Design](documentation/readme_files/design-mobile-privacy-policy.png)
 </details>
@@ -274,6 +274,7 @@ I picked colors for the food bowl website to make it look appealing and match th
 Playball:
 
 Playball is a font that looks like elegant handwriting. It gives a friendly and personal feel, which is great for making your food bowl website feel welcoming and like it's filled with handmade goodness.
+
 Plus Jakarta Sans:
 
 Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps people easily read and understand your website. It comes in different thickness levels (400, 500, 600), so you can use it for different parts of your site to make things stand out or look more important.
@@ -283,6 +284,81 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 ## Features
 
 ### Existing Features
+
+<details><summary><b>Sign Up</b></summary>
+
+![Design](documentation/readme_files/design-mobile-sign-up.png)
+</details>
+
+<details><summary><b>Sign In</b></summary>
+
+![Design](documentation/readme_files/design-mobile-login.png)
+</details>
+
+<details><summary><b>Log Out</b></summary>
+
+![Design](documentation/readme_files/design-mobile-logout.png)
+</details>
+
+<details><summary><b>Home</b></summary>
+
+![Design](documentation/readme_files/design-mobile-home.png)
+</details>
+
+<details><summary><b>Products</b></summary>
+
+![Design](documentation/readme_files/design-mobile-products.png)
+</details>
+
+<details><summary><b>Product Detail</b></summary>
+
+![Design](documentation/readme_files/design-mobile-product-detail.png)
+</details>
+
+<details><summary><b>Cart</b></summary>
+
+![Design](documentation/readme_files/design-mobile-shopping-cart.png)
+</details>
+
+<details><summary><b>Checkout</b></summary>
+
+![Design](documentation/readme_files/design-mobile-checkout.png)
+</details>
+
+<details><summary><b>Checkout Success</b></summary>
+
+![Design](documentation/readme_files/design-mobile-checkout-success.png)
+</details>
+
+<details><summary><b>Profile</b></summary>
+
+![Design](documentation/readme_files/design-mobile-profile-one.png)
+</details>
+
+<details><summary><b>Profile (empty)</b></summary>
+
+![Design](documentation/readme_files/design-mobile-profile-two.png)
+</details>
+
+<details><summary><b>Product Management 1</b></summary>
+
+![Design](documentation/readme_files/design-mobile-product-management-one.png)
+</details>
+
+<details><summary><b>Product Management 2</b></summary>
+
+![Design](documentation/readme_files/design-mobile-product-management-two.png)
+</details>
+
+<details><summary><b>Contact Us</b></summary>
+
+![Design](documentation/readme_files/design-mobile-contact.png)
+</details>
+
+<details><summary><b>Contact Us</b></summary>
+
+![Design](documentation/readme_files/design-mobile-privacy-policy.png)
+</details>
 
 ### Features Left to Implement
 
