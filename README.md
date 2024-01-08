@@ -394,6 +394,10 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 
 ## Ecommerce Business Model
 
+Our food bowl website operates on a Business-to-Customer (B2C) model, focusing on individual transactions without the need for subscriptions. In its early development stages, the site already features a newsletter and links for social media marketing.
+
+Through social media, we aim to cultivate a community of users, leveraging larger platforms like Facebook to boost site visitor numbers. The newsletter serves as a direct communication channel, allowing us to share updates on special offers, new stock, changes to business hours, and notifications of upcoming events. As our website evolves, these features contribute to a user-friendly and engaging experience for our customers.
+
 ## Search Engine Optimization (SEO) & Social Media Marketing
 
 ### Keywords
