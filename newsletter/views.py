@@ -37,5 +37,5 @@ def send_confirmation_email(email):
     """Send newsletter signup confirmation email"""
     subject = render_to_string(
                 'newsletter/welcome_newsletter_subject.txt')
-    message = render_to_string('newsletter/welcome_newsletter_subject.txt', {'email': email})
+    message = render_to_string('newsletter/welcome_newsletter_body.txt', {'email': email})
     send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email])
