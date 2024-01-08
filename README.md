@@ -163,6 +163,41 @@ My process was divided into 8 Design (Milestones). Once the iteration is done, a
 
 I had 8 Iterations overall, each iteration had 3-5 issues.
 
+<details><summary><b>EPIC 1 - General Functionality</b></summary>
+
+![Iterations](documentation/readme_files/epic-one.png)
+</details>
+
+<details><summary><b>EPIC 2 - Products and Categories</b></summary>
+
+![Iterations](documentation/readme_files/epic-two.png)
+</details>
+
+<details><summary><b>EPIC 3 - Shopping Cart and Checkout</b></summary>
+
+![Iterations](documentation/readme_files/epic-three.png)
+</details>
+
+<details><summary><b>EPIC 4 - Authentication</b></summary>
+
+![Iterations](documentation/readme_files/epic-four.png)
+</details>
+
+<details><summary><b>EPIC 5 - User Profile</b></summary>
+
+![Iterations](documentation/readme_files/epic-five.png)
+</details>
+
+<details><summary><b>EPIC 6 - Admin Functionality</b></summary>
+
+![Iterations](documentation/readme_files/epic-six.png)
+</details>
+
+<details><summary><b>EPIC 7 - SEO & Marketing</b></summary>
+
+![Iterations](documentation/readme_files/epic-seven.png)
+</details>
+
 [View here](https://github.com/nataliiasolomchak21/blissbowl/milestones)
 
 #### Issues
@@ -175,6 +210,11 @@ I had 8 Iterations overall, each iteration had 3-5 issues.
 </details>
 
 #### Product Backlog
+
+![Product Backlog](documentation/readme_files/backlog.png)
+</details>
+
+The Password Reset feature remains pending as the only unimplemented user story. It has been added to Product Backlog  for future development.
 
 ## UI
 
