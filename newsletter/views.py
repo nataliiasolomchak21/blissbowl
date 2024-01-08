@@ -24,9 +24,9 @@ def newsletter(request):
 
                 messages.success(request, 'You have successfully subscribed to our newsletter!')
             else:
-                messages.warning(request, 'This email is already subscribed to our newsletter.')
+                messages.error(request, 'This email is already subscribed to our newsletter.')
             
-            return redirect('homepage') 
+            return redirect(request.META.get('HTTP_REFERER', '/')) 
 
     else:
         form = NewsletterForm()
