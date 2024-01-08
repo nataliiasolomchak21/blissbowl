@@ -26,12 +26,12 @@ def newsletter(request):
             else:
                 messages.warning(request, 'This email is already subscribed to our newsletter.')
             
-            return redirect('base') 
+            return redirect('homepage') 
 
     else:
         form = NewsletterForm()
 
-    return render(request, 'base.html', {'form': form})
+    return render(request, 'homepage/index.html', {'form': form})
 
 def send_confirmation_email(email):
     """Send newsletter signup confirmation email"""
