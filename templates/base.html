@@ -177,16 +177,17 @@
     <section class="newsletter">
         <div class="container justify-content-center align-items-center mt-4">
         <h3 class="text-white text-center">Subscribe to our newsletter</h3>
-        <form class="row g-3 mt-3">
+        <form class="row g-3 mt-3" method="post" action="{% url 'newsletter' %}">
+            {% csrf_token %}
             <div class="mb-3 col-12 col-md-8 mx-auto newsletter-box">
                 <div id="emailHelp" class="form-text text-white mb-2 display-4">Never miss out on limited-time offers and special discounts!</div>
                 <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
                 <div class="input-group gap-2">
-                    <input type="email" class="form-control border-black rounded-1" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control border-black rounded-1" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     <button type="submit" class="btn btn-primary rounded-1 bg-black rounded-1 border-black col-12 col-md-3">Subscribe</button>
                 </div>
             </div>
-        </form>
+        </form>        
         </div>
     </section>
     <!-- The code for social media icons is taken from Code Institute's Love Running Project -->
