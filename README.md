@@ -32,7 +32,7 @@ View the live project [here](https://blissbowl-375a7f20caf7.herokuapp.com/)
 - [Deployment](#deployment)
     - [Database (ElephangSQL)](#database-elephangsql)
     - [Django secret key](#django-secret-key)
-    - [AWS](#aws)
+    - [Cloudinary](#cloudinary)
     - [Stripe API](#stripe-api)
     - [Gmail API](#gmail-api)
     - [Heroku](#heroku)
@@ -369,7 +369,6 @@ The Password Reset feature remains pending as the only unimplemented user story.
 ![Design](documentation/readme_files/design-md-l-contact.png)
 </details>
 
-
 ### Colour Palette
 
 ![Color Palette](documentation/readme_files/colour-palette.png)
@@ -392,81 +391,146 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 
 ## Features
 
-### Existing Features
+<details><summary><b>Header</b></summary>
 
-<details><summary><b>Sign Up</b></summary>
-
-![Design](documentation/readme_files/design-mobile-sign-up.png)
+![Design](documentation/readme_files/header-feature.png)
 </details>
 
-<details><summary><b>Sign In</b></summary>
+<details><summary><b>Footer</b></summary>
 
-![Design](documentation/readme_files/design-mobile-login.png)
+![Design](documentation/readme_files/footer-feature.png)
 </details>
 
-<details><summary><b>Log Out</b></summary>
+<details><summary><b>Search</b></summary>
 
-![Design](documentation/readme_files/design-mobile-logout.png)
+![Design](documentation/readme_files/search-feature.png)
 </details>
 
-<details><summary><b>Home</b></summary>
+<details><summary><b>About Us section</b></summary>
 
-![Design](documentation/readme_files/design-mobile-home.png)
+![Design](documentation/readme_files/about-us-feature.png)
+</details>
+
+<details><summary><b>Testimonials section</b></summary>
+
+![Design](documentation/readme_files/testimonials-feature.png)
+</details>
+
+<details><summary><b>Categories</b></summary>
+
+![Design](documentation/readme_files/categories-feature.png)
 </details>
 
 <details><summary><b>Products</b></summary>
 
-![Design](documentation/readme_files/design-mobile-products.png)
+![Design](documentation/readme_files/products-feature.png)
 </details>
 
 <details><summary><b>Product Detail</b></summary>
 
-![Design](documentation/readme_files/design-mobile-product-detail.png)
+![Design](documentation/readme_files/product-detail-feature.png)
 </details>
 
-<details><summary><b>Cart</b></summary>
+<details><summary><b>Add Product (Admin)</b></summary>
 
-![Design](documentation/readme_files/design-mobile-shopping-cart.png)
+![Design](documentation/readme_files/add-product-feature.png)
+</details>
+
+<details><summary><b>Edit Product (Admin)</b></summary>
+
+![Design](documentation/readme_files/edit-product-feature.png)
+</details>
+
+<details><summary><b>Edit | Delete (Admin)</b></summary>
+
+![Design](documentation/readme_files/prod-man-edit-delete-btns-feature.png)
+</details>
+
+<details><summary><b>Profile (Delivery Info)</b></summary>
+
+![Design](documentation/readme_files/profile-info-feature.png)
+</details>
+
+<details><summary><b>Profile (Order History)</b></summary>
+
+![Design](documentation/readme_files/profile-order-history-feature.png)
+</details>
+
+<details><summary><b>Profile (Favourites)</b></summary>
+
+![Design](documentation/readme_files/profile-favourites-feature.png)
+</details>
+
+<details><summary><b>Toast (Error)</b></summary>
+
+![Design](documentation/readme_files/toast-error-feature.png)
+</details>
+<details><summary><b>Toast (Success)</b></summary>
+
+![Design](documentation/readme_files/toast-success-feature.png)
+</details>
+<details><summary><b>Toast (Warning)</b></summary>
+
+![Design](documentation/readme_files/toast-warning-feature.png)
+</details>
+<details><summary><b>Toast (Info)</b></summary>
+
+![Design](documentation/readme_files/toast-info-feature.png)
+</details>
+
+<details><summary><b>Sign Up</b></summary>
+
+![Design](documentation/readme_files/signup-feature.png)
+</details>
+
+<details><summary><b>Sign In</b></summary>
+
+![Design](documentation/readme_files/login-feature.png)
+</details>
+
+<details><summary><b>Log Out</b></summary>
+
+![Design](documentation/readme_files/logout-feature.png)
+</details>
+
+<details><summary><b>Email Verification</b></summary>
+
+![Design](documentation/readme_files/email-verification-one-feature.png)
+</details>
+
+<details><summary><b>Email Verification (Message)</b></summary>
+
+![Design](documentation/readme_files/email-verification-feature.png)
+</details>
+
+<details><summary><b>Comments</b></summary>
+
+![Design](documentation/readme_files/comments-feature.png)
+</details>
+
+<details><summary><b>Contact</b></summary>
+
+![Design](documentation/readme_files/design-md-l-products.png)
+</details>
+
+<details><summary><b>Shopping Cart</b></summary>
+
+![Design](documentation/readme_files/shopping-cart-feature.png)
 </details>
 
 <details><summary><b>Checkout</b></summary>
 
-![Design](documentation/readme_files/design-mobile-checkout.png)
+![Design](documentation/readme_files/checkout-feature.png)
 </details>
 
-<details><summary><b>Checkout Success</b></summary>
+<details><summary><b>Order Confirmation</b></summary>
 
-![Design](documentation/readme_files/design-mobile-checkout-success.png)
+![Design](documentation/readme_files/order-confirmation-feature.png)
 </details>
 
-<details><summary><b>Profile</b></summary>
+<details><summary><b>Order Confirmation Email</b></summary>
 
-![Design](documentation/readme_files/design-mobile-profile-one.png)
-</details>
-
-<details><summary><b>Profile (empty)</b></summary>
-
-![Design](documentation/readme_files/design-mobile-profile-two.png)
-</details>
-
-<details><summary><b>Product Management 1</b></summary>
-
-![Design](documentation/readme_files/design-mobile-product-management-one.png)
-</details>
-
-<details><summary><b>Product Management 2</b></summary>
-
-![Design](documentation/readme_files/design-mobile-product-management-two.png)
-</details>
-
-<details><summary><b>Contact Us</b></summary>
-
-![Design](documentation/readme_files/design-mobile-contact.png)
-</details>
-
-<details><summary><b>Contact Us</b></summary>
-
-![Design](documentation/readme_files/design-mobile-privacy-policy.png)
+![Design](documentation/readme_files/order-confirmation-email-feature.png)
 </details>
 
 ### Features Left to Implement
