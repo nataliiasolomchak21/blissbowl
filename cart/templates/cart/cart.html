@@ -35,7 +35,7 @@
                             </div>
                             <div class="col-4 col-md-2">
                                 <p class="mb-0 d-none d-md-block"><strong>Price</strong></p>
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0">€{{ item.product.price }}</p>
                             </div>
                             <div class="col-4 col-md-2">
                                 <p class="mb-0 d-none d-md-block"><strong>Qty</strong></p>
@@ -109,11 +109,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
-</script>
 {% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
     // Update quantity on click
@@ -134,6 +129,5 @@
          location.reload();
      });
 });
-
 </script>
 {% endblock %}

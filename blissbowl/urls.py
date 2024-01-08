@@ -18,11 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from django.conf.urls import handler404
-from .views import custom_404
-
-# Handlers for custome errors
-handler404 = custom_404
+from .views import handler40
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,3 +30,6 @@ urlpatterns = [
     path('profiles/', include('profiles.urls')),
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'blissbowl.views.handler404'
+
