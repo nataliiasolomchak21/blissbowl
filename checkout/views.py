@@ -16,6 +16,7 @@ from cart.contexts import cart_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -83,7 +84,8 @@ def checkout(request):
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(
+                request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -159,7 +161,8 @@ def checkout_success(request, order_number):
     # Send confirmation email
     send_confirmation_email(order)
 
-    messages.success(request, f'Order successfully processed! Your order number is {order_number}. A confirmation email has been sent to {order.email}.')
+    messages.success(
+        request, f'Order successfully processed! Your order number is {order_number}. A confirmation email has been sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']
@@ -171,16 +174,18 @@ def checkout_success(request, order_number):
 
     return render(request, template, context)
 
+
 def send_confirmation_email(order):
     """Send the user a confirmation email"""
     cust_email = order.email
+
+    # Remove newline characters from the subject
     subject = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_subject.txt',
-        {'order': order})
-    body = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_body.txt',
-        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-    
+        'checkout/confirmation_emails/confirmation_email_subject.txt', {'order': order}).strip()
+
+    body = render_to_string('checkout/confirmation_emails/confirmation_email_body.txt', {
+                            'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
     send_mail(
         subject,
         body,
