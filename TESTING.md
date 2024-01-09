@@ -53,7 +53,9 @@ Back to [README](README.md)
 | *"As a site admin I can add products to the catalog so that I can expand and update the product offerings"*|![User Story](documentation/readme_files/add-product-feature.png)|
 | *"As a site admin I can edit/update existing products on the webiste so that I can keep product information accurate"*|![User Story](documentation/readme_files/edit-product-feature.png)|
 | *"As a site admin I can delete products from the catalog so that I can manage the product offerings effectively"*|![User Story](documentation/readme_files/prod-man-edit-delete-btns-feature.png)|
-| *"As a site admin I can make the website SEO-optimized so that it ranks higher in search engine results"*|![User Story](documentation/readme_files/signup-feature.png)|
+| *"As a site admin I can make the website SEO-optimized so that it ranks higher in search engine results"*|![User Story](documentation/testing_files/metatags.png)|
+| *"As a site admin I can make the website SEO-optimized so that it ranks higher in search engine results"*|![User Story](documentation/testing_files/robots.png)|
+| *"As a site admin I can make the website SEO-optimized so that it ranks higher in search engine results"*|![User Story](documentation/testing_files/sitemap.png)|
 | *"As a site admin I can implement Facebook marketing strategies so that the website gains visibility and attracts more users"*|![User Story](documentation/readme_files/facebook-page-one.png)|
 
 ## Validator Testing
