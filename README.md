@@ -389,6 +389,33 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 
 ## ERD (Entity-Relationship Diagram)
 
+![ERD](documentation/readme_files/erd.png)
+
+* Order and OrderLineItem:
+
+One Order can have multiple OrderLineItems.
+One OrderLineItem is associated with one Order.
+
+* Product and OrderLineItem:
+
+One Product can be associated with multiple OrderLineItems.
+One OrderLineItem is associated with one Product.
+
+* User and UserProfile:
+
+One User has one UserProfile. (On ERD it is shown as a OnetoMany relationship which is a mistake )
+UserProfile is linked to the User.
+
+* User and FavouriteBowls:
+
+One User has one FavouriteBowls.
+FavouriteBowls is linked to the User.
+
+* FavouriteBowls and Product:
+
+One FavouriteBowls can have multiple Products.
+One Product can be associated with multiple FavouriteBowls.
+
 ## Features
 
 <details><summary><b>Header</b></summary>
