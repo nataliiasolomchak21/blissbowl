@@ -447,5 +447,78 @@ Responsiveness is tested on various devices such as:
 
 ### Solved
 
+* There is a problem with Stripe webhook, one of the events keeps failing everytime the order was going through and the order confirmation email wasn't sending as well, so I decided to move send_confirmation_email function into a checkout_success view and it worked.
+
+```python
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
+    # Send confirmation email
+    send_confirmation_email(order)
+
+    messages.success(
+        request, f'Order successfully processed! Your order number is {order_number}. A confirmation email has been sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+    }
+
+    return render(request, template, context)
+
+
+def send_confirmation_email(order):
+    """Send the user a confirmation email"""
+    cust_email = order.email
+
+    # Remove newline characters from the subject
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt', {'order': order}).strip()
+
+    body = render_to_string('checkout/confirmation_emails/confirmation_email_body.txt', {
+                            'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
+
+```
+
 ### Unsolved
+
+* As I still have a problem with Stripe webhook, the ```payment_intent.succeeded``` keeps failing. I talked about this with one of the tutors but she said that the code is correct and it should be working. Below is one the screenshot:
+
+![screenshot](documentation/testing_files/stripe-problem.png) 
+
 
