@@ -396,70 +396,98 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 ![Features](documentation/readme_files/header-feature.png)
 </details>
 
+Provides easy navigation, allowing users to quickly access different sections of the website, enhancing the overall user experience.
+
 <details><summary><b>Footer</b></summary>
 
 ![Features](documentation/readme_files/footer-feature.png)
 </details>
+
+ Serves as a comprehensive information hub, including links to home page, products, contact details, and privacy policy, enhancing website usability.
 
 <details><summary><b>Search</b></summary>
 
 ![Features](documentation/readme_files/search-feature.png)
 </details>
 
+Enables users to find specific food items or categories quickly, saving time and offering a more personalized browsing experience.
+
 <details><summary><b>About Us section</b></summary>
 
 ![Features](documentation/readme_files/about-us-feature.png)
 </details>
+
+Builds trust and connection with users by providing background information about the website.
 
 <details><summary><b>Testimonials section</b></summary>
 
 ![Features](documentation/readme_files/testimonials-feature.png)
 </details>
 
+Builds credibility and trust as users can read about positive experiences from other customers, influencing their decision-making process positively.
+
 <details><summary><b>Categories</b></summary>
 
 ![Features](documentation/readme_files/categories-feature.png)
 </details>
+
+Organizes products into logical groups, making it easier for users to browse and find items of interest without feeling overwhelmed.
 
 <details><summary><b>Products</b></summary>
 
 ![Features](documentation/readme_files/products-feature.png)
 </details>
 
+Showcases the variety of food bowls available, allowing users to explore and choose meals that suit their preferences and dietary needs.
+
 <details><summary><b>Product Detail</b></summary>
 
 ![Features](documentation/readme_files/product-detail-feature.png)
 </details>
+
+Provides in-depth information about each food bowl, including image, name, weight, calories, preparation time, description, quantity input, and pricing, helping users make informed decisions.
 
 <details><summary><b>Add Product (Admin)</b></summary>
 
 ![Features](documentation/readme_files/add-product-feature.png)
 </details>
 
+ Admins can input detailed information such as product name, description, images, pricing, and nutritional details. The addition of products ensures that the website's catalog remains dynamic and up-to-date, offering users a diverse and fresh selection.
+
 <details><summary><b>Edit Product (Admin)</b></summary>
 
 ![Features](documentation/readme_files/edit-product-feature.png)
 </details>
+
+This feature allows administrators to modify existing product information, including updating images, adjusting pricing, refining descriptions, or editing nutritional details. The ability to edit ensures that product listings accurately reflect any changes in pricing, or specifications.
 
 <details><summary><b>Edit | Delete (Admin)</b></summary>
 
 ![Features](documentation/readme_files/prod-man-edit-delete-btns-feature.png)
 </details>
 
+Admins can remove products from the website's catalog when they are no longer available or relevant. 
+
 <details><summary><b>Profile (Delivery Info)</b></summary>
 
 ![Features](documentation/readme_files/profile-info-feature.png)
 </details>
+
+Allows users to save delivery preferences, streamlining the checkout process and providing a more personalized and convenient experience.
 
 <details><summary><b>Profile (Order History)</b></summary>
 
 ![Features](documentation/readme_files/profile-order-history-feature.png)
 </details>
 
+Enables users to track their previous orders, facilitating reordering of favorite items and providing a historical overview of their purchasing behavior.
+
 <details><summary><b>Profile (Favourites)</b></summary>
 
 ![Features](documentation/readme_files/profile-favourites-feature.png)
 </details>
+
+Allows users to mark and save their favorite food bowls, creating a personalized list for quicker decision-making during future visits.
 
 <details><summary><b>Toast (Error)</b></summary>
 
@@ -478,60 +506,84 @@ Plus Jakarta Sans is a clean and modern font without fancy decorations. It helps
 ![Features](documentation/readme_files/toast-info-feature.png)
 </details>
 
+Provides real-time feedback on user actions, enhancing the overall user experience and keeping users informed about the status of their interactions.
+
 <details><summary><b>Sign Up</b></summary>
 
 ![Features](documentation/readme_files/signup-feature.png)
 </details>
+
+This feature allows new users to create an account on the food bowl delivery website. 
 
 <details><summary><b>Sign In</b></summary>
 
 ![Features](documentation/readme_files/login-feature.png)
 </details>
 
+The log-in functionality enables registered users to access their accounts by entering their email address or username and a corresponding password. 
+
 <details><summary><b>Log Out</b></summary>
 
 ![Features](documentation/readme_files/logout-feature.png)
 </details>
+
+The log-out feature allows users to securely end their current session on the website.
 
 <details><summary><b>Email Verification</b></summary>
 
 ![Features](documentation/readme_files/email-verification-one-feature.png)
 </details>
 
+Verifying user email addresses adds an extra layer of security to the platform, ensuring that only legitimate users with valid email accounts can access and utilize the website's features.
+
 <details><summary><b>Email Verification (Message)</b></summary>
 
 ![Features](documentation/readme_files/email-verification-feature.png)
 </details>
+
+Sending an email verification message serves to validate users, confirming the authenticity of their provided email addresses. 
 
 <details><summary><b>Comments</b></summary>
 
 ![Features](documentation/readme_files/comments-feature.png)
 </details>
 
+Fosters user engagement and community by allowing customers to leave feedback, share experiences, and provide valuable insights.
+
 <details><summary><b>Contact</b></summary>
 
 ![Features](documentation/readme_files/design-md-l-products.png)
 </details>
+
+Offers a direct communication channel, allowing users to reach out with inquiries, feedback, or issues, promoting customer satisfaction and trust.
 
 <details><summary><b>Shopping Cart</b></summary>
 
 ![Features](documentation/readme_files/shopping-cart-feature.png)
 </details>
 
+Allows users to gather their chosen items in one place, making it easy to review and finalize their selections before completing the purchase.
+
 <details><summary><b>Checkout</b></summary>
 
 ![Features](documentation/readme_files/checkout-feature.png)
 </details>
+
+Streamlines the purchasing process, guiding users through the necessary steps to secure their order efficiently. This involves providing delivery information, selecting payment options, and confirming their purchase. 
 
 <details><summary><b>Order Confirmation</b></summary>
 
 ![Features](documentation/readme_files/order-confirmation-feature.png)
 </details>
 
+Provides users with immediate assurance that their order was successfully placed and is being processed.
+
 <details><summary><b>Order Confirmation Email</b></summary>
 
 ![Features](documentation/readme_files/order-confirmation-email-feature.png)
 </details>
+
+Ensures users receive a confirmation of their order, providing reassurance and serving as a reference for order details.
 
 ### Features Left to Implement
 
