@@ -66,8 +66,6 @@ Back to [README](README.md)
 
 [Jigsaw](https://jigsaw.w3.org/css-validator/) was used to check the validity of css file.
 
-
-
 ### JavaScript
 
 [JSHint](https://jshint.com/) was used for validation.
@@ -104,8 +102,6 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 ## Manual Testing
 
-### Accessibility
-
 ### Lighthouse
 
 ##### Mobile
@@ -124,6 +120,10 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 | Browser | Fail/Pass | Screenshot |
 | ---  | ---  | --- |
+| Chrome | Pass | ![screenshot](documentation/testing_files/homepage-userstory.png) |
+| Edge | Pass | ![screenshot](documentation/testing_files/edge.png) |
+| Opera | Pass | ![screenshot](documentation/testing_files/opera.png) |
+| Firefox | Pass | ![screenshot](documentation/testing_files/firefox.png) |
 
 ## Bugs
 
