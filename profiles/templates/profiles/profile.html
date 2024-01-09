@@ -92,7 +92,13 @@
                         {% endif %}
                         <div class="card-body p-2">
                             <h5 class="card-title p-2">{{ bowl.name }}</h5>
+                        <div class="d-flex">
                             <a href="{% url 'products' %}?category={{ bowl.category.name }}" class="mt-1 mx-2 p-1 {% if bowl.category|lower == 'chicken' %}chicken-category{% elif bowl.category|lower == 'fish' %}fish-category{% elif bowl.category|lower == 'beef' %}beef-category{% elif bowl.category|lower == 'veggie' %}veggie-category{% else %}default-category{% endif %}" style="font-size: .8rem;">{{ bowl.category }} Bowls</a>
+                            <form method="post" action="{% url 'remove_from_favourites' product_id=bowl.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="bg-transparent mt-2">Remove</button>
+                            </form>
+                        </div>
                             <div class="price-info d-flex align-items-center">
                                 <p class="card-text p-3 fw-bold mt-2" style="font-size: 1.5rem;">€{{ bowl.price }}</p>
                                 <a href="{% url 'product_detail' bowl.id %}" class="bg-black rounded-5 text-white details-btn">More Details</a>

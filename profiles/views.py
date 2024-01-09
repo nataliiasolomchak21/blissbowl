@@ -71,3 +71,17 @@ def add_to_favourites(request, product_id):
     return redirect('profile')
 
 
+@login_required
+def remove_from_favourites(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    favourite_bowls = FavouriteBowls.objects.get(user=request.user)
+
+    if product in favourite_bowls.bowls.all():
+        favourite_bowls.bowls.remove(product)
+        messages.success(request, f"{product.name} removed from your favorites.")
+    else:
+        messages.warning(request, f"{product.name} is not in your favorites.")
+
+    return redirect('profile')
+
+
