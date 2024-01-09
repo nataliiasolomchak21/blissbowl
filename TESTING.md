@@ -191,15 +191,43 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 ### Lighthouse
 
+Note to the assessors: The accessibility is low because of some of the Bootstrap elements.
+
 ##### Mobile
 
-| Page | Size | Screenshot |
-| ---  | ---  | --- |
+| Page | Screenshot |
+| ---  | --- |
+| Home |![screenshot](documentation/testing_files/home-lighthouse-mobile.png) |
+| Products |![screenshot](documentation/testing_files/products-lighthouse-mobile.png) |
+| Product Detail |![screenshot](documentation/testing_files/product-detail-lighthouse-mobile.png) |
+| Cart |![screenshot](documentation/testing_files/home-lighthouse-mobile.png) |
+| Checkout |![screenshot](documentation/testing_files/checkout-lighthouse-mobile.png) |
+| Checkout Success |![screenshot](documentation/testing_files/checkout-success-lighthouse-mobile.png) |
+| Profile |![screenshot](documentation/testing_files/profile-lighthouse-mobile.png) |
+| Contact |![screenshot](documentation/testing_files/contact-lighthouse-mobile.png) |
+| Add Product |![screenshot](documentation/testing_files/add-product-lighthouse-mobile.png) |
+| Edit Product |![screenshot](documentation/testing_files/edit-product-lighthouse-mobile.png) |
+| Sign Up |![screenshot](documentation/testing_files/signup-lighthouse-mobile.png) |
+| Sign In |![screenshot](documentation/testing_files/signin-lighthouse-mobile.png) |
+| Log Out |![screenshot](documentation/testing_files/logout-lighthouse-mobile.png) |
 
 ##### Desktop
 
-| Page | Size | Screenshot |
-| ---  | ---  | --- |
+| Page | Screenshot |
+| ---  | --- |
+| Home |![screenshot](documentation/testing_files/home-lighthouse-desktop.png) |
+| Products |![screenshot](documentation/testing_files/products-lighthouse-desktop.png) |
+| Product Detail |![screenshot](documentation/testing_files/product-detail-lighthouse-desktop.png) |
+| Cart |![screenshot](documentation/testing_files/cart-lighthouse-desktop.png) |
+| Checkout |![screenshot](documentation/testing_files/checkout-lighthouse-desktop.png) |
+| Checkout Success |![screenshot](documentation/testing_files/checkout-success-lighthouse-desktop.png) |
+| Profile |![screenshot](documentation/testing_files/profile-lighthouse-desktop.png) |
+| Contact |![screenshot](documentation/testing_files/contact-lighthouse-desktop.png) |
+| Add Product |![screenshot](documentation/testing_files/add-product-lighthouse-desktop.png) |
+| Edit Product |![screenshot](documentation/testing_files/edit-product-lighthouse-desktop.png) |
+| Sign Up |![screenshot](documentation/testing_files/signup-lighthouse-desktop.png) |
+| Sign In |![screenshot](documentation/testing_files/signin-lighthouse-desktop.png) |
+| Log Out |![screenshot](documentation/testing_files/logout-lighthouse-desktop.png) |
 
 ### Responsiveness
 
