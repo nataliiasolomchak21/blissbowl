@@ -62,13 +62,98 @@ Back to [README](README.md)
 
 [W3C validation](https://validator.w3.org/) was used to check the markup validity of html file.
 
+<details><summary><b>base (index).html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>404.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>products.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>product_detail.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>add_product.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>edit_product.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>cart.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>checkout.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>checkout_success.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>contact.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>profile.html</b></summary>
+
+![HTML](documentation/readme_files/header-feature.png)
+</details>
+
 ### CSS
 
 [Jigsaw](https://jigsaw.w3.org/css-validator/) was used to check the validity of css file.
 
+<details><summary><b>base.css</b></summary>
+
+![CSS](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>checkout.html</b></summary>
+
+![CSS](documentation/readme_files/header-feature.png)
+</details>
+
+<details><summary><b>profile.css</b></summary>
+
+![CSS](documentation/readme_files/header-feature.png)
+</details>
+
 ### JavaScript
 
 [JSHint](https://jshint.com/) was used for validation.
+
+<details><summary><b>stripe_elements.js</b></summary>
+
+![JS](documentation/testing_files/stripe-elements-js.png)
+</details>
+
+<details><summary><b>quantity_input_script</b></summary>
+
+![JS](documentation/testing_files/quantity-input.png)
+</details>
+
+<details><summary><b>Other js code in html</b></summary>
+
+![JS](documentation/testing_files/otherjs-code.png)
+</details>
 
 ### Python
 
