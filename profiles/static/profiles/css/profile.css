@@ -1,3 +1,4 @@
+/* Profile options styling */
 .info-form input {
     margin-top: .5rem;
     border: 1px solid #191919;
@@ -45,7 +46,7 @@
     padding-top: .7rem;
 }
 
-
+/* Media queries */
 @media (min-width: 992px) {
     .profile-options {
         flex-direction: row;

@@ -1,3 +1,4 @@
+/* Stripe element styling */
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -48,6 +49,7 @@
   background-color: #E0E8E0;
 }
 
+/* Spinner styling */
 #loading-overlay {
 	display: none;
 	position: fixed;

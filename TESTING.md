@@ -123,17 +123,17 @@ Back to [README](README.md)
 
 <details><summary><b>base.css</b></summary>
 
-![CSS](documentation/readme_files/header-feature.png)
+![CSS](documentation/testing_files/base-css.png)
 </details>
 
 <details><summary><b>checkout.html</b></summary>
 
-![CSS](documentation/readme_files/header-feature.png)
+![CSS](documentation/testing_files/checkout-css.png)
 </details>
 
 <details><summary><b>profile.css</b></summary>
 
-![CSS](documentation/readme_files/header-feature.png)
+![CSS](documentation/testing_files/profile-css.png)
 </details>
 
 ### JavaScript
