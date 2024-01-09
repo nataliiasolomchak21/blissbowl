@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://blissbowl-375a7f20caf7.herokuapp.com/sitemap.xml

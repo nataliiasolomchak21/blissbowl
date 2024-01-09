@@ -668,7 +668,23 @@ Through social media, we aim to cultivate a community of users, leveraging large
 
 ### Sitemap
 
+I've used [XML-Sitemaps](https://www.xml-sitemaps.com) to generate a [sitemap.xml](sitemap.xml) file with the link to my deployed website https://blissbowl-375a7f20caf7.herokuapp.com/
+
 ### Robots
+
+I've generated the [robots.txt](robots.txt) file located at the root directory, incorporating the default configurations within.
+
+```
+User-agent: *
+Disallow:
+Sitemap: https://retro-reboot.herokuapp.com/sitemap.xml
+```
+
+Further links for future implementation:
+- [Google search console](https://search.google.com/search-console)
+- [Creating and submitting a sitemap](https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap)
+- [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
+- [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
 ### Social Media Marketing
 
