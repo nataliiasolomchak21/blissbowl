@@ -412,6 +412,28 @@ Note to the assessors: The accessibility is low because of some of the Bootstrap
 
 ### Responsiveness
 
+Responsiveness is tested on various devices such as:
+
+<details><summary><b>Samsung Galaxy S8+</b></summary>
+
+![screenshot](documentation/testing_files/samsung-galaxy-s-eight.png)
+</details>
+
+<details><summary><b>Samsung Galaxy A34</b></summary>
+
+![screenshot](documentation/testing_files/samsung-galaxy-a-thirty-four.jpg)
+</details>
+
+<details><summary><b>Moto G Power</b></summary>
+
+![screenshot](documentation/testing_files/motogpower.png)
+</details>
+
+<details><summary><b>IPad</b></summary>
+
+![screenshot](documentation/testing_files/ipad.png)
+</details>
+
 ### Browser compatibility
 
 | Browser | Fail/Pass | Screenshot |
