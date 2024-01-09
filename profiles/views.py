@@ -8,13 +8,16 @@ from products.models import Product
 
 from .forms import UserProfileForm
 
+
 @login_required
 def profile(request):
     """ Display the user's profile. """
-    user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+    user_profile, created = UserProfile.objects.get_or_create(
+        user=request.user)
 
     # Get or create the user's favourite bowls
-    favourite_bowls, created = FavouriteBowls.objects.get_or_create(user=request.user)
+    favourite_bowls, created = FavouriteBowls.objects.get_or_create(
+        user=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
@@ -22,7 +25,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=user_profile)
 
@@ -37,7 +41,6 @@ def profile(request):
     }
 
     return render(request, template, context)
-
 
 
 def order_history(request, order_number):
@@ -60,10 +63,12 @@ def order_history(request, order_number):
 @login_required
 def add_to_favourites(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    favourite_bowls, created = FavouriteBowls.objects.get_or_create(user=request.user)
+    favourite_bowls, created = FavouriteBowls.objects.get_or_create(
+        user=request.user)
 
     if product in favourite_bowls.bowls.all():
-        messages.warning(request, f"{product.name} is already in your favorites.")
+        messages.warning(
+            request, f"{product.name} is already in your favorites.")
     else:
         favourite_bowls.bowls.add(product)
         messages.success(request, f"{product.name} added to your favorites.")
@@ -78,10 +83,9 @@ def remove_from_favourites(request, product_id):
 
     if product in favourite_bowls.bowls.all():
         favourite_bowls.bowls.remove(product)
-        messages.success(request, f"{product.name} removed from your favorites.")
+        messages.success(
+            request, f"{product.name} removed from your favorites.")
     else:
         messages.warning(request, f"{product.name} is not in your favorites.")
 
     return redirect('profile')
-
-

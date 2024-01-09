@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import FavouriteBowls
 
+
 class FavouriteBowlsAdmin(admin.ModelAdmin):
     list_display = ('user', 'display_bowls')
 
@@ -11,5 +12,6 @@ class FavouriteBowlsAdmin(admin.ModelAdmin):
             return "No Favourite Bowls"
 
     display_bowls.short_description = 'Bowls'
+
 
 admin.site.register(FavouriteBowls, FavouriteBowlsAdmin)
