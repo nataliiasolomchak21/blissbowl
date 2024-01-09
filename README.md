@@ -666,6 +666,8 @@ Through social media, we aim to cultivate a community of users, leveraging large
 
 ### Keywords
 
+I picked out some words that match my website, so when people look online, they can easily find my page through a search engine. I chose both short and long phrases. I also tried out [Word Tracker](https://www.wordtracker.com/) to see how often people use the main words on my site, but only during the free trial.
+
 ### Sitemap
 
 I've used [XML-Sitemaps](https://www.xml-sitemaps.com) to generate a [sitemap.xml](sitemap.xml) file with the link to my deployed website https://blissbowl-375a7f20caf7.herokuapp.com/
