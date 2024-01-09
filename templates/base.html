@@ -64,7 +64,7 @@
             <div class="order-lg-2 ml-auto d-flex align-items-center">
                 <ul class="nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle text-black" href="{% url 'account_login' %}" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <iconify-icon icon="ph:user" width="24" height="24" class="text-black mx-auto"></iconify-icon>
                         </a>
@@ -193,7 +193,8 @@
                 <li><a href="{% url 'homepage' %}">Home</a>
                     <li><a href="{% url 'products' %}">Products</a>
                         <li><a href="{% url 'contact_us' %}">Contact Us</a>
-                            <li><a href="https://www.termsfeed.com/live/e2129952-3c05-4969-a6dc-9c74a683197b">Privacy Policy</a>
+                            <li><a href="https://www.termsfeed.com/live/e2129952-3c05-4969-a6dc-9c74a683197b" target="_blank" rel="noopener"
+                                aria-label="Visit our Privacy Policy page(open in a new tab)">Privacy Policy</a>
                             </ul>
                         </div>
                     </footer>

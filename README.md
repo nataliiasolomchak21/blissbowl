@@ -878,6 +878,7 @@ All text content on the website was created by me.
 * The core functionality was taken from [Code Institute's Boutique Ado Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/)
 * Contact form was taken from [here](https://codepen.io/tutsplus/pen/qBxPXZZ)
 * About Us section was taken from [here](https://bootstrapbrain.com/component/bootstrap-about-us-page-section/#code)
+* Most of the styling was done with Boootstrap 5.
 
 ## Acknowledgements
 
