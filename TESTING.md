@@ -370,11 +370,13 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 I entered a non-existent url to make sure the 404 page appeared.
 
-![Python](documentation/testing_files/blissbowl-views-python.png)
+![404](documentation/testing_files/404-html.png)
 
 #### 500.html
 
+I created a test view with url to test 500 page.
 
+![500](documentation/testing_files/500-html.png)
 
 ## Manual Testing
 
