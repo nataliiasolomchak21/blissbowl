@@ -343,11 +343,11 @@ Back to [README](README.md)
 
 In order to run the tests, I ran the following command in the terminal each time:
 
-`python3 manage.py test name-of-app `
+`python3 manage.py test `
 
 To create the coverage report, I would then run the following commands:
 
-`coverage run --source=name-of-app manage.py test`
+`coverage run manage.py test`
 
 `coverage report`
 
@@ -357,7 +357,35 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 `python3 -m http.server`
 
-####  app
+![Coverage](documentation/testing_files/coverage.png)
+
+Because of time constraints, I managed to create only six test files.
+
+Tests were created for the following files:
+
+* test_views.py (cart)
+
+![Test](documentation/testing_files/test-views-cart.png)
+
+* test_models.py (contact)
+
+![Test](documentation/testing_files/test-models-contact.png)
+
+* test_views.py (contact)
+
+![Test](documentation/testing_files/test-views-contact.png)
+
+* test_views.py (homepage)
+
+![Test](documentation/testing_files/test-views-homepage.png)
+
+* test_forms.py (newsletter)
+
+![Test](documentation/testing_files/test-forms-newsletter.png)
+
+* test_models.py (newsletter)
+
+![Test](documentation/testing_files/test-models-newsletter.png)
 
 ### Error Pages Testing
 
