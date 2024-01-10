@@ -366,6 +366,16 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 ### Error Pages Testing
 
+#### 404.html
+
+I entered a non-existent url to make sure the 404 page appeared.
+
+![Python](documentation/testing_files/blissbowl-views-python.png)
+
+#### 500.html
+
+
+
 ## Manual Testing
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
