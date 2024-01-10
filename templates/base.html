@@ -178,30 +178,21 @@
         <!-- The code for social media icons is taken from Code Institute's Love Running Project -->
         <div class="footer-links d-flex justify-content-center align-items-center mt-5">
             <ul id="social-media">
-                <li>
-                    <a class="logo-font-text text-white logo-footer" href="{% url 'homepage' %}">BlissBowl</a>
+                <li><a class="logo-font-text text-white logo-footer" href="{% url 'homepage' %}">BlissBowl</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61555186000757" target="_blank" rel="noopener"aria-label="Visit our Facebook page(open in a new tab)"><i class="fa-brands fa-facebook text-white"></i></a>
+                    </li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page(open in a new tab)"><i class="fa-brands fa-instagram text-white"></i></a>
                 </li>
-                <li>
-                    <div class="social-media-links d-flex gap-3">
-                        <li><a href="https://www.facebook.com/profile.php?id=61555186000757" target="_blank" rel="noopener"
-                            aria-label="Visit our Facebook page(open in a new tab)"><i class="fa-brands fa-facebook text-white"></i></a>
-                        </li>
-                        <li><a href="https://instagram.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Instagram page(open in a new tab)"><i class="fa-brands fa-instagram text-white"></i></a>
-                        </li>
-                    </div>
-                </li>
-                <h5 class="text-white mt-1">@Copyright BlissBowl 2024</h5>
             </ul>
             <ul id="main-links">
-                <li><a href="{% url 'homepage' %}">Home</a>
-                    <li><a href="{% url 'products' %}">Products</a>
-                        <li><a href="{% url 'contact_us' %}">Contact Us</a>
-                            <li><a href="https://www.termsfeed.com/live/e2129952-3c05-4969-a6dc-9c74a683197b" target="_blank" rel="noopener"
-                                aria-label="Visit our Privacy Policy page(open in a new tab)">Privacy Policy</a>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'products' %}">Products</a></li>
+                        <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                            <li><a href="https://www.termsfeed.com/live/e2129952-3c05-4969-a6dc-9c74a683197b">Privacy Policy</a></li>
                             </ul>
-                        </div>
-                    </footer>
+                        </div>      
+    </footer>
                     <!-- Postload js -->
                     {% block postloadjs %}
                     <script>
