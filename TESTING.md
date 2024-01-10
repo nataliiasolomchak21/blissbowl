@@ -14,7 +14,7 @@ Back to [README](README.md)
     - [Python](#python)
 - [Unit Testing](#unit-testing)
     - [Coverage](#coverage)
-- [Error Handling](#error-handling)
+- [Error Pages Testing](#error-pages-testing)
 - [Manual Testing](#manual-testing)
 - [Lighthouse](#lighthouse)
 - [Responsiveness](#responsiveness)
@@ -364,11 +364,121 @@ To see the HTML version of the reports, and find out whether some pieces of code
 
 ####  app
 
-## Error Handling
-
 ### Error Pages Testing
 
 ## Manual Testing
+
+| Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| **Home Page and Navbar** | | | | |
+| | Click on Logo | Redirection to Home page | Pass | |
+| | Click on Home button in navbar | Redirection to Categories page (Chicken) | Pass | |
+| | Click on Chicken Bowls button in navbar | Redirection to Products page (Chicken) | Pass | |
+| | Click on Fish Bowls button in navbar | Redirection to Products page (Fish) | Pass | |
+| | Click on Beef Bowls button in navbar | Redirection to Products page (Beef) | Pass | |
+| | Click on Veggie Bowls button in navbar | Redirection to Products page (Veggie) | Pass | |
+| | Click on My Profile button in navbar | Redirection to Profile page | Pass | |
+| | Click on Log Out button in navbar | Redirection to Log out page | Pass | |
+| | Click on Product Management Bowls button in navbar | Redirection to Add Product page | Pass | |
+| | Click on Sign Up Bowls button in navbar | Redirection to Sign Up page | Pass | |
+| | Click on Sign In Bowls button in navbar | Redirection to Sign In page | Pass | |
+| | Click on Shopping cart icon button in navbar | Redirection to Cart page | Pass | |
+| | Click on Chicken Bowls button in Categories section | Redirection to Products page (Chicken) | Pass | |
+| | Click on Fish Bowls button in Categories section | Redirection to Products page (Fish) | Pass | |
+| | Click on Beef Bowls button in Categories section | Redirection to Products page (Beef) | Pass | |
+| | Click on Veggie Bowls button in Categories section | Redirection to Products page (Veggie) | Pass | |
+| | Click on Order Now button in Free delivery section | Redirection to Products page | Pass | |
+| **Footer** | | | | |
+| | Click Home link in footer | Redirects user to Home page | Pass | |
+| | Click Contact Us link in footer | Redirects user to contact page | Pass | |
+| | Click social media icons in footer | Opens social media site clicked in a new tab | Pass | |
+| | Click on Products in footer | Redirection to Products page | Pass | |
+| | Click on Privacy Policy in footer | Redirection to Privacy Policy page that opens in the new tab | Pass | |
+| | Click on Subscribe button on blank newsletter form | Error message appears telling user to fill in this field | Pass | |
+| | Click on Subscribe button on filled newsletter form | Alert message lets user know they have signed up for the mailing list and welcome email is sent to address provided | Pass | |
+| | Try to subscribe to newsletter with already subscribed email address | Error message appears telling user to check the form or make sure they're not already subscribed | Pass/Fail | The functionality is working but the message is not appearing |
+| **Products Page** | | | | |
+| | Click on Chicken Bowls button in Categories section | Filters products and shows chicken bowls | Pass | |
+| | Click on Fish Bowls button in Categories section | Filters products and shows fish bowls | Pass | |
+| | Click on Beef Bowls button in Categories section | Filters products and shows beef bowls | Pass | |
+| | Click on Veggie Bowls button in Categories section | Filters products and shows veggie bowls | Pass | |
+| | Click on More Details button | Redirects to Product Detail page to | Pass | |
+| | Click on edit product button | Redirection to Edit Product page for that product | Pass | Button only appears if logged in user is an admin |
+| | Click on delete product button | Deletes Product | Pass | Delete modal should have been added |
+| **Product Detail Page** | | | | |
+| | Click on Add To Favourites button if the user is not authenticated | Redirection to Sign In page | Pass | |
+| | Click on Add To Favourites button if the user is authenticated | Redirection to Profile page and add product to favourites | Pass | |
+| | Click on Add To Favourites button if the product is already in Favourites | Displays message that the bowl is already in favourites | Pass/Fail | It doesn't add it to favourites again and redirects to Profile but the message is not displayed |
+| | Click + button on quantity selector form | Quantity number increases to 10 | Pass | |
+| | Click - button on quantity selector form | Quantity number decreases to one | Pass | |
+| | Click on Categories button | Redirects to Products page and shows products from that category | Pass | |
+| | Manually enter number greater than 10 | Error message appears letting the user know what the value must be | Pass | |
+| | Click Add To Cart button | Product is added to cart and quantity is set to the user's choice | Pass | |
+| | Click Add To Cart button when user already has the product in their basket | Quantity selected is added to the existing quantity in the user's cart for the product | Pass | |
+| | Click on edit product button | Redirection to Edit Product page for that product | Pass | Button only appears if logged in user is an admin |
+| | Click on delete product button | Deletes Product | Pass | Delete modal should have been added |
+| | Add comment under the product if the user is not authenticated | Ask user to sign in | Pass | |
+| | Add comment under the product if the user is authenticated | Add comment | Pass | |
+| **Search** | | | | |
+| | Enter word into search bar that appears in at least one product's name or description | Redirection to Products page | Pass | Products filtered to only show products containing search term |
+| | Enter word into search bar that doesn't appear in any product's name or description | Redirection to Products page | Pass | Products page is empty and shows user that 0 products were returned |
+| | Enter nothing into search bar | Redirection to Products page | Pass | Error message shows and lets user know they didn't enter any search criteria |
+| **Contact Page** | | | | |
+| | Enter name | Form will only submit if all fields are filled | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter message | Form will only submit if all fields are filled | Pass | |
+| | Click Send with missing fields | Message lets user know all fields are required | Pass | |
+| | Click Send with all valid fields | User is sent email confirming their message has been received and information has been saved in the database | Pass | |
+| **Sign Up Page** | | | | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Click Sign Up button on sign up page | Sends confirmation email and lets user know to check their email | Pass | |
+| | Click link in confirmation email | Redirects user to sign in page | Pass | |
+| **Sign In Page** | | | | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | |
+| | Click Login button on login page | Redirects user to homepage | Pass | |
+| **Log Out Page** | | | | |
+| | Click Logout button | Redirects user to logout and asks for confirmation that the user wants to log out page | Pass | |
+| | Click Logout button | Redirects user to home page | Pass | |
+| **User Profile Page** | | | | |
+| | Click Update Information button | Saves form contents to be default information for user | Pass | Default information is cleared if form is submitted while blank |
+| | Click Order History to see previous orders in Order History | Redirects user to order history section | Pass | |
+| | Click Order Number for previous order in Order History | Redirects user to order confirmation page for that order | Pass | |
+| | Click Favourites to see favourite bowls | Redirects user to favourites section | Pass | |
+| | Click Remove in Favourites to remove a bowl | Removes a bowl Redirects user to main profile section | Pass | Should've implemented a functionality to redirect to favourites section |
+| **Cart** | | | | |
+| | Click Add to Cart button | Pop-up window with the items in order appears| Pass | |
+| | Click Go to Checkout button | Redirects to cart | Pass | |
+| | Click - button on quantity selector form | Quantity number decreases if current quantity is greater than one | Pass | |
+| | Click + button on quantity selector | Quantity number increases to 10 | Pass | |
+| | Click update button under quantity selector form | Updated quantity of product in cart to number in quantity select form | Pass | |
+| | Click remove button under quantity selector form | Removes product from cart | Pass | |
+| | Click on Back to Products button | Redirection to All Products page | Pass | |
+| | Click on Go to Checkout button | Redirection to checkout page | Pass | |
+| **Checkout** | | | | |
+| | Click Complete Order button without all required fields filled out | Brings back to the form | Pass | |
+| | Click Save delivery information to profile button | User's default information will be saved and displayed at the checkout on order completion | Pass | Only visible to logged in users |
+| | Click on Create an account link | Redirection to sign up page | Pass | Only visible to logged out users |
+| | Click on login link | Redirection to sign in page | Pass | Only visible to logged out users |
+| | Click Complete Order button without card details filled out | Message letting user know that their card number is incomplete | Pass | |
+| | Click Complete Order button with all details filled out | Loading spinner appears and order is processed | Pass | |
+| | Order completed | Order confirmation email is sent to the user and redirection to checkout success page | Pass | |
+| **Checkout Success Page** | | | | |
+| | Click Back to Products button | Redirects user to products page | Pass | |
+| | Click Back to profile button button | Redirects user to their profile | Pass | Only visible if user comes to this page from the order history list on their profile |
+| **Add Product Page** | | | | |
+| | Click Product Management link from Admin dropdown | Redirects admin to add product page | Pass | User can only see this if they're logged in as an admin |
+| | Click Cancel button | Redirects admin to products page | Pass | |
+| | Click Add Product button with form filled correctly | Creates a new product on the site using the information provided | Pass | The only issue is that max length for price is 8 symbols instead of 4 |
+| | Click Add Product button with form filled incorrectly | Message appears letting the admin know to fill in the required form fields | Pass | |
+| | Click Add Product button with no image set | Product will be created but will be displayed with default product image | Pass | |
+| **Edit Product Page** | | | | |
+| | Click edit icon on product | Redirects user to Edit Product page | Pass | User must be an admin to see icon and access this page |
+| | Click Cancel button | Redirects admin to all products page | Pass | |
+| | Click Update Product button with form filled correctly | Updates product with information provided | Pass | |
+| | Click Update Product button with form filled incorrectly | Message appears letting the admin know to fill in the required form fields | Pass | |
+| | Click Update Product button with no image set | Product will be updated but will be displayed with default product image | Pass | |
 
 ### Lighthouse
 
