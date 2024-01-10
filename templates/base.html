@@ -178,15 +178,19 @@
         <!-- The code for social media icons is taken from Code Institute's Love Running Project -->
         <div class="footer-links d-flex justify-content-center align-items-center mt-5">
             <ul id="social-media">
-                <a class="logo-font-text text-white logo-footer" href="{% url 'homepage' %}">BlissBowl</a>
-                <div class="social-media-links d-flex gap-3">
-                    <li><a href="https://www.facebook.com/profile.php?id=61555186000757" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page(open in a new tab)"><i class="fa-brands fa-facebook text-white"></i></a>
-                    </li>
-                    <li><a href="https://instagram.com" target="_blank" rel="noopener"
-                        aria-label="Visit our Instagram page(open in a new tab)"><i class="fa-brands fa-instagram text-white"></i></a>
-                    </li>
-                </div>
+                <li>
+                    <a class="logo-font-text text-white logo-footer" href="{% url 'homepage' %}">BlissBowl</a>
+                </li>
+                <li>
+                    <div class="social-media-links d-flex gap-3">
+                        <li><a href="https://www.facebook.com/profile.php?id=61555186000757" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page(open in a new tab)"><i class="fa-brands fa-facebook text-white"></i></a>
+                        </li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page(open in a new tab)"><i class="fa-brands fa-instagram text-white"></i></a>
+                        </li>
+                    </div>
+                </li>
                 <h5 class="text-white mt-1">@Copyright BlissBowl 2024</h5>
             </ul>
             <ul id="main-links">
@@ -198,9 +202,9 @@
                             </ul>
                         </div>
                     </footer>
-                    <!-- Postload Js -->
+                    <!-- Postload js -->
                     {% block postloadjs %}
-                    <script type="text/javascript">
+                    <script>
                     document.addEventListener('DOMContentLoaded', function () {
                       // Select the toast element
                       var toastElement = document.querySelector('.toast');

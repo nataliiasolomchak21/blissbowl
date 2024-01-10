@@ -66,57 +66,52 @@ Back to [README](README.md)
 
 <details><summary><b>base (index).html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
-</details>
-
-<details><summary><b>404.html</b></summary>
-
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/index-html-validator.png)
 </details>
 
 <details><summary><b>products.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/products-html-validator.png)
 </details>
 
 <details><summary><b>product_detail.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/product-detail-html-validator.png)
 </details>
 
 <details><summary><b>add_product.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/add-product-html-validator.png)
 </details>
 
 <details><summary><b>edit_product.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/edit-product-html-validator%20-%20Copy.png)
 </details>
 
 <details><summary><b>cart.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/cart-html-validator.png)
 </details>
 
 <details><summary><b>checkout.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/checkout-html-validator.png)
 </details>
 
 <details><summary><b>checkout_success.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/checkout-success-html-validator.png)
 </details>
 
 <details><summary><b>contact.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/contact-html-validator.png)
 </details>
 
 <details><summary><b>profile.html</b></summary>
 
-![HTML](documentation/readme_files/header-feature.png)
+![HTML](documentation/testing_files/profiles-html-validator.png)
 </details>
 
 ### CSS
