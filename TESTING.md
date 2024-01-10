@@ -652,5 +652,10 @@ I've been having a stripe js error on my profile page and I fixed that by removi
 
 The overall newsletter is working but the message for when the user is already signed up for a newsletter is not showing up. The functionality for when the user is already sign up is still working and the user email is not saving to the database if it's already there.
 
+* When you copy the url for add/edit product and the user is not logged in, it redirects you to the sign in page as it supposed to but when you log in as a user and not an admin instead of showing the message that
+"Only store owners can do that" it shows this and then after you refresh it shows home page and a message. My views for this functionality seems to be correct, so I don't know what could be causing this.
 
+![screenshot](documentation/testing_files/login-problem.png) 
+
+* Also, in my project I have two media folders because the first time when the media folder was in root directory, the images weren't displaying on the page, so I've decided to move it into static folder and it worked for me. Then, when I have connected Cloudinary, the media folder with all the images was created again in root directory. Due to the shortage of time, I am not able to fix this issue now.
 
