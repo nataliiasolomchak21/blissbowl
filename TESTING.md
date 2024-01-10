@@ -514,11 +514,21 @@ def send_confirmation_email(order):
     )
 
 ```
+* Stripe js error
+
+I've been having a stripe js error on my profile page and I fixed that by removing the unnecessary stripe block at the end of the html file.
+
+![screenshot](documentation/testing_files/stripe-js-error.png)
 
 ### Unsolved
 
 * As I still have a problem with Stripe webhook, the ```payment_intent.succeeded``` keeps failing. I talked about this with one of the tutors but she said that the code is correct and it should be working. Below is one the screenshot:
 
 ![screenshot](documentation/testing_files/stripe-problem.png) 
+
+* Newsletter messages
+
+The overall newsletter is working but the message for when the user is already signed up for a newsletter is not showing up. The functionality for when the user is already sign up is still working and the user email is not saving to the database if it's already there.
+
 
 
