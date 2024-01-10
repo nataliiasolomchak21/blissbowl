@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import Newsletter
 from .forms import NewsletterForm
 
+
 def newsletter(request):
     """ Signup to newsletter """
     if request.method == 'POST':
@@ -22,20 +23,24 @@ def newsletter(request):
                 # Send confirmation email
                 send_confirmation_email(email)
 
-                messages.success(request, 'You have successfully subscribed to our newsletter!')
+                messages.success(
+                    request, 'You have successfully subscribed to our newsletter!')
             else:
-                messages.warning(request, 'This email is already subscribed to our newsletter.')
-            
-            return redirect(request.META.get('HTTP_REFERER', '/')) 
+                messages.warning(
+                    request, 'This email is already subscribed to our newsletter.')
+
+            return redirect(request.META.get('HTTP_REFERER', '/'))
 
     else:
         form = NewsletterForm()
 
     return render(request, 'homepage/index.html', {'form': form})
 
+
 def send_confirmation_email(email):
     """Send newsletter signup confirmation email"""
     subject = render_to_string(
-                'newsletter/welcome_newsletter_subject.txt')
-    message = render_to_string('newsletter/welcome_newsletter_body.txt', {'email': email})
+        'newsletter/welcome_newsletter_subject.txt')
+    message = render_to_string(
+        'newsletter/welcome_newsletter_body.txt', {'email': email})
     send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email])

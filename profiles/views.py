@@ -44,6 +44,7 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """ Display order history """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -62,6 +63,7 @@ def order_history(request, order_number):
 
 @login_required
 def add_to_favourites(request, product_id):
+    """ Add product to favourites list"""
     product = get_object_or_404(Product, pk=product_id)
     favourite_bowls, created = FavouriteBowls.objects.get_or_create(
         user=request.user)
@@ -78,6 +80,7 @@ def add_to_favourites(request, product_id):
 
 @login_required
 def remove_from_favourites(request, product_id):
+    """ Remove product from favourites list"""
     product = get_object_or_404(Product, pk=product_id)
     favourite_bowls = FavouriteBowls.objects.get(user=request.user)
 

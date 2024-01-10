@@ -7,6 +7,7 @@ from .forms import ContactForm
 
 
 def contact_us(request):
+    """ A view for the contact page"""
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():

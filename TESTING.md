@@ -384,7 +384,7 @@ I created a test view with url to test 500 page.
 | --- | --- | --- | --- | --- |
 | **Home Page and Navbar** | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home button in navbar | Redirection to Categories page (Chicken) | Pass | |
+| | Click on Home button in navbar | Redirection to Home page | Pass | |
 | | Click on Chicken Bowls button in navbar | Redirection to Products page (Chicken) | Pass | |
 | | Click on Fish Bowls button in navbar | Redirection to Products page (Fish) | Pass | |
 | | Click on Beef Bowls button in navbar | Redirection to Products page (Beef) | Pass | |
