@@ -1,6 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 
+
 class IndexViewTest(TestCase):
 
     def setUp(self):

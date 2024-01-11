@@ -3,6 +3,7 @@ from django.urls import reverse
 from .forms import ContactForm
 from .models import ContactMessage
 
+
 class ContactUsViewTest(TestCase):
 
     def setUp(self):
@@ -28,7 +29,7 @@ class ContactUsViewTest(TestCase):
             'message': 'Test message'
         }
         response = self.client.post(self.url, data)
-        self.assertEqual(response.status_code, 302)  
+        self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('contact_us'))
         self.assertEqual(ContactMessage.objects.count(), 1)
         self.assertEqual(ContactMessage.objects.first().name, 'John Doe')
@@ -39,7 +40,7 @@ class ContactUsViewTest(TestCase):
         """
         data = {}  # Invalid data with missing required fields
         response = self.client.post(self.url, data)
-        self.assertEqual(response.status_code, 200)  
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'contact/contact.html')
         self.assertIsInstance(response.context['form'], ContactForm)
         self.assertContains(response, 'Form submission failed.')
