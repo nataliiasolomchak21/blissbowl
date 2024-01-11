@@ -682,4 +682,4 @@ The overall newsletter is working but the message for when the user is already s
 
 * Also, in my project I have two media folders because the first time when the media folder was in root directory, the images weren't displaying on the page, so I've decided to move it into static folder and it worked for me. Then, when I have connected Cloudinary, the media folder with all the images was created again in root directory. Due to the shortage of time, I am not able to fix this issue now.
 
-* If an admin adds a new product without choosing an image, there's a 404 error in the console saying the image is missing. That happens because I didn't set a backup image for cases where the admin doesn't add one.
+* If an admin adds a new product without choosing an image, there's a 404 error in the console saying the image is missing. That happens because I didn't set a backup image for cases where the admin doesn't add one. As an owner/admin you would always make sure that your products have image that's why you didn't set up backup image.
