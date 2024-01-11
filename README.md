@@ -151,7 +151,7 @@ For this project I used Agile methodology. Agile methodology is a project manage
 ![Kanban Board](documentation/readme_files/kanban-board.png)
 </details>
 
-This a visual representation of my Kanban Board during the project. In addition to three essential columns, I created a column "Product Backlog" later renamed into for the user stories that I wasn't able to implement.
+This a visual representation of my Kanban Board during the project. In addition to three essential columns, I created a column "Product Backlog" for the user stories that I wasn't able to implement.
 My process was divided into 8 Design (Milestones). Once the iteration is done, all of the user stories from that iteration were going to "Done" column. If any of the user stories from a particular iteration weren't implemented, they were going back to the Product Backlog.
 
 #### Iterations
@@ -579,7 +579,7 @@ Fosters user engagement and community by allowing customers to leave feedback, s
 
 <details><summary><b>Contact</b></summary>
 
-![Features](documentation/readme_files/design-md-l-products.png)
+![Features](documentation/readme_files/contact-feature.png)
 </details>
 
 Offers a direct communication channel, allowing users to reach out with inquiries, feedback, or issues, promoting customer satisfaction and trust.

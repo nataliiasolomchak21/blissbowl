@@ -86,7 +86,7 @@ Back to [README](README.md)
 
 <details><summary><b>edit_product.html</b></summary>
 
-![HTML](documentation/testing_files/edit-product-html-validator%20-%20Copy.png)
+![HTML](documentation/testing_files/edit-product-html-validator.png)
 </details>
 
 <details><summary><b>cart.html</b></summary>
