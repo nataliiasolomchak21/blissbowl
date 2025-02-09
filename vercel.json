@@ -3,16 +3,10 @@
     "builds": [
       {
         "src": "blissbowl/wsgi.py",      
+        "use": "@vercel/python",          
         "config": {
           "maxLambdaSize": "15mb",          
           "runtime": "python3.x"            
-        }
-      },
-      {
-        "src": "build_files.sh",            
-        "use": "@vercel/static-build",      
-        "config": {
-          "distDir": "staticfiles"          
         }
       }
     ],
@@ -22,7 +16,7 @@
         "dest": "blissbowl/wsgi.py"      
       },
       {
-        "src": "/static/(.*)",              
+        "src": "/static/(.*)",               
         "dest": "/static/$1"                
       }
     ]
