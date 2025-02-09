@@ -2,22 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "blissbowl/wsgi.py",      
-        "use": "@vercel/python",          
-        "config": {
-          "maxLambdaSize": "15mb",          
-          "runtime": "python3.x"            
-        }
+        "src": "manage.py",
+        "use": "@vercel/python"
       }
     ],
     "routes": [
       {
-        "src": "/(.*)",                     
-        "dest": "blissbowl/wsgi.py"      
-      },
-      {
-        "src": "/static/(.*)",               
-        "dest": "/static/$1"                
+        "src": "/(.*)",
+        "dest": "/$1"
       }
     ]
   }
