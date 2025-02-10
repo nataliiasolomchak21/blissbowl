@@ -1,3 +1,13 @@
 # build_files.sh
-pip install -r requirements.txt
-python3.9 manage.py collectstatic --noinput
+
+# Ensure pip is installed
+python3 -m ensurepip --default-pip
+
+# Upgrade pip
+python3 -m pip install --upgrade pip
+
+# Install dependencies
+python3 -m pip install -r requirements.txt
+
+# Collect static files for Django
+python3 manage.py collectstatic --noinput
