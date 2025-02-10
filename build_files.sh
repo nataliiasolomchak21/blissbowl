@@ -18,6 +18,7 @@ python3 -m pip install Django==5.1
 python3 -m pip install dj-database-url==0.5.0
 python3 -m pip psycopg2-binary==2.8.5
 python3 -m pip cloudinary==1.36.0
+python3 -m pip django-allauth==65.3.1
 
 
 # Collect static files for Django
