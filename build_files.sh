@@ -20,6 +20,7 @@ python3 -m pip install psycopg2-binary==2.8.5
 python3 -m pip install cloudinary==1.36.0
 python3 -m pip install django-allauth==65.3.1
 python3 -m pip install dj3-cloudinary-storage==0.0.6
+python3 -m pip install django-crispy-forms==1.12.0
 
 
 
