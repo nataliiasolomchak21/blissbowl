@@ -15,6 +15,9 @@ python3 -m pip --version
 # Install dependencies
 python3 -m pip install --no-cache-dir -r requirements.txt
 
+python3 -m pip install Django==5.1
+
+
 # Debugging: Check if Django is installed
 echo "Installed packages:"
 python3 -m pip list
