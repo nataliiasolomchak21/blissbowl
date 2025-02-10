@@ -1,13 +1,23 @@
-# build_files.sh
+#!/bin/bash
 
-# Ensure pip is installed
+# Ensure pip is installed and upgraded
 python3 -m ensurepip --default-pip
-
-# Upgrade pip
 python3 -m pip install --upgrade pip
 
-# Install dependencies
-python3 -m pip install -r requirements.txt
+# Check Python version
+echo "Python version:"
+python3 --version
 
-# Collect static files for Django
+# Check pip version
+echo "Pip version:"
+python3 -m pip --version
+
+# Install dependencies
+python3 -m pip install --no-cache-dir -r requirements.txt
+
+# Debugging: Check if Django is installed
+echo "Installed packages:"
+python3 -m pip list
+
+# Collect static files
 python3 manage.py collectstatic --noinput
