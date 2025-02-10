@@ -17,7 +17,7 @@ pip install -r requirements.txt
 python3 -m pip install Django==5.1
 python3 -m pip install dj-database-url==0.5.0
 python3 -m pip psycopg2-binary==2.8.5
-python3 -m pip dj3-cloudinary-storage==0.0.6
+python3 -m pip cloudinary-storage==1.12.0
 python3 -m pip ptyprocess==0.7.0
 python3 -m pip pure_eval==0.2.3
 python3 -m pip pycairo==1.27.0
