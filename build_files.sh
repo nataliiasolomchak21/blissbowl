@@ -18,6 +18,7 @@ python3 -m pip install --no-cache-dir -r requirements.txt
 python3 -m pip install Django==5.1
 python3 -m pip install dj-database-url==0.5.0
 python3 -m pip install psycopg2-binary==2.8.5
+python3 -m pip install dj3-cloudinary-storage==0.0.6
 
 
 
