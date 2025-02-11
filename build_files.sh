@@ -3,6 +3,9 @@
 # Ensure the script has execution permissions
 chmod +x build_files.sh
 
+# Install PostgreSQL dependencies
+apt-get update && apt-get install -y libpq-dev gcc
+
 # Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
