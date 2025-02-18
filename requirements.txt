@@ -83,7 +83,6 @@ psutil==6.0.0
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
 pure_eval==0.2.3
-pycairo>=1.20.0 
 pycparser==2.22
 pydotplus==2.0.2
 Pygments==2.18.0

@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Install dependencies
+# Install system dependencies
+apt-get update && apt-get install -y libcairo2-dev
+
+# Install Python dependencies
 pip install -r requirements.txt
 
 # Apply database migrations
