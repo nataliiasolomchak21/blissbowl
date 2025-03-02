@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "moviegeek/wsgi.py",
+      "src": "blissbowl/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.10"
@@ -23,7 +23,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "moviegeek/wsgi.py"
+      "dest": "blissbowl/wsgi.py"
     }
   ]
 }
