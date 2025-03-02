@@ -2,6 +2,7 @@
 
 # Remove the documentation folder 
 rm -rf documentation
+rm -rf media
 # Install system dependencies
 apt-get update && apt-get install -y libcairo2-dev
 
@@ -10,6 +11,7 @@ pip install -r requirements.txt
 
 # Apply database migrations
 python3 manage.py migrate
+
 
 # Collect static files
 python3 manage.py collectstatic --noinput
