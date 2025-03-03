@@ -32,6 +32,7 @@ urlpatterns = [
     path('newsletter/', include('newsletter.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+
 handler404 = 'blissbowl.views.handler404'
 handler500 = 'blissbowl.views.handler500'
 
