@@ -11,6 +11,10 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "https://res.cloudinary.com/duqhvucdi/raw/upload/v1/static/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "blissbowl/wsgi.py"
     }
