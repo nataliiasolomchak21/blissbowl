@@ -2,7 +2,7 @@
 
 The BlissBowl Website represents a comprehensive full-stack application skillfully developed with a blend of HTML, CSS, JavaScript, Python, Django, Stripe, and Bootstrap technologies. This dynamic platform is designed to function as a delivery service, showcasing an extensive array of food bowls categorized to cater to diverse culinary preferences. Users can explore a wide range of delectable options, each thoughtfully curated and presented through an intuitive and user-friendly interface. 
 
-View the live project [here](https://blissbowl-375a7f20caf7.herokuapp.com/)
+View the live project [here](https://blissbowl.vercel.app/)
 
 ![Am I Responsive](documentation/readme_files/am-i-responsive.png)
 
