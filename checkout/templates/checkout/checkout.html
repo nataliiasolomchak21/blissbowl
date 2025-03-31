@@ -4,7 +4,7 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="https://res.cloudinary.com/duqhvucdi/raw/upload/v1741013098/static/checkout/css/checkout.css">
 {% endblock %}
 
 {% block page_header %}
@@ -133,5 +133,5 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script src="https://res.cloudinary.com/duqhvucdi/raw/upload/v1741013099/static/checkout/js/stripe_elements.js"></script>
 {% endblock %}
